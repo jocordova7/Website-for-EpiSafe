@@ -34,15 +34,17 @@ try {
 <head>
   <meta charset="utf-8">
   <title>SeizureGuard - Redirecting</title>
-  <meta http-equiv="refresh" content="0;url=/Website-for-EpiSafe">
+  <meta http-equiv="refresh" content="0;url=Website-for-EpiSafe">
   <script>
-    // Use window.location.origin to get the current domain
-    const baseUrl = window.location.origin;
-    window.location.replace(baseUrl + '/Website-for-EpiSafe');
+    // Get the current path segments
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    // If we're already in the repo directory, don't add it again
+    const targetPath = pathSegments.includes('Website-for-EpiSafe') ? '' : 'Website-for-EpiSafe';
+    window.location.replace(targetPath);
   </script>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="/Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
+  <p>If you are not redirected automatically, <a href="Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
 </body>
 </html>`
   );
