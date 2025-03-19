@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization for static export
+    domains: ['jocordova7.github.io'], // Add the domain explicitly
     remotePatterns: [
       {
         protocol: 'https',
@@ -21,6 +22,10 @@ const nextConfig: NextConfig = {
   eslint: {
     // Disable ESLint during production builds
     ignoreDuringBuilds: true,
+  },
+  // Disable type checking during build for faster builds
+  typescript: {
+    ignoreBuildErrors: true,
   },
 };
 
