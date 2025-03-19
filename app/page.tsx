@@ -1,103 +1,180 @@
+'use client';
+
 import Image from "next/image";
+import Link from "next/link";
+import ProductShowcase from "./components/ProductShowcase";
+import Testimonials from "./components/Testimonials";
+import ResearchEvidence from "./components/ResearchEvidence";
+import FAQ from "./components/FAQ";
+import TechnologyExplainer from "./components/TechnologyExplainer";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main className="flex flex-col min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-b from-white to-[#E6F7F3] dark:from-gray-900 dark:to-[#1A2F26] py-16 md:py-24">
+        <div className="container mx-auto px-6 md:px-10 lg:px-16 grid md:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2C3E50] dark:text-white">
+              Advanced Seizure
+              <span className="text-[#00A878] dark:text-[#00A878]"> Detection</span> for Wearables
+            </h1>
+            <p className="text-lg text-[#6B7280] dark:text-gray-300">
+              SeizureGuard provides real-time monitoring and alerts for epilepsy patients using advanced AI and wearable technology. Get peace of mind for yourself and your loved ones.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link 
+                href="/monitoring" 
+                className="btn-primary text-center"
+              >
+                Start Monitoring
+              </Link>
+              <Link 
+                href="#features" 
+                className="btn-secondary text-center"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/hero-wearable.jpg"
+              alt="Smart watch with seizure detection app"
+              fill
+              className="object-cover"
+              priority
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-16 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-6 md:px-10 lg:px-16">
+          <h2 className="section-title text-center">
+            Key Features
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <FeatureCard 
+              title="Real-time Monitoring"
+              description="Advanced sensors continuously track vital signs and motion patterns to detect seizure activity."
+              icon="monitor"
+            />
+            <FeatureCard 
+              title="Instant Alerts"
+              description="Immediate notifications to caregivers and family members when a seizure is detected."
+              icon="alert"
+            />
+            <FeatureCard 
+              title="Medical History"
+              description="Comprehensive seizure logs and reports to share with healthcare providers."
+              icon="medical"
+            />
+            <FeatureCard 
+              title="Emergency Response"
+              description="One-touch emergency calling to connect with emergency services or designated contacts."
+              icon="emergency"
+            />
+            <FeatureCard 
+              title="Secure Data"
+              description="End-to-end encryption and HIPAA-compliant data storage for your privacy and security."
+              icon="security"
+            />
+            <FeatureCard 
+              title="Easy to Use"
+              description="Intuitive interface designed for patients of all ages and their caregivers."
+              icon="accessibility"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Product Showcase */}
+      <ProductShowcase />
+
+      {/* Technology Explainer */}
+      <TechnologyExplainer />
+
+      {/* Research Evidence */}
+      <ResearchEvidence />
+
+      {/* Enhanced Testimonials */}
+      <Testimonials />
+
+      {/* FAQ Component */}
+      <FAQ />
+
+      {/* Call to Action */}
+      <section className="py-16 bg-[#00A878] dark:bg-[#008F63]">
+        <div className="container mx-auto px-6 md:px-10 lg:px-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+            Join thousands of users who trust SeizureGuard for advanced seizure detection and monitoring.
+          </p>
+          <Link 
+            href="/monitoring" 
+            className="bg-white hover:bg-gray-100 text-[#00A878] font-medium py-3 px-8 rounded-md transition-colors inline-block"
+          >
+            Start Your Free Trial
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+// Feature card component
+function FeatureCard({ title, description, icon }: { title: string; description: string; icon: string }) {
+  return (
+    <div className="card hover:shadow-lg transition-shadow">
+      <div className="w-12 h-12 bg-[#E6F7F3] dark:bg-[#1A2F26] rounded-full flex items-center justify-center mb-4">
+        <span className="text-[#00A878] text-xl">
+          {/* Icon placeholder - in a real app would use actual icons */}
+          {icon === "monitor" && "📊"}
+          {icon === "alert" && "🔔"}
+          {icon === "medical" && "📋"}
+          {icon === "emergency" && "🚑"}
+          {icon === "security" && "🔒"}
+          {icon === "accessibility" && "👥"}
+        </span>
+      </div>
+      <h3 className="text-xl font-semibold mb-2 text-[#2C3E50] dark:text-white">{title}</h3>
+      <p className="text-[#6B7280] dark:text-gray-300">{description}</p>
+    </div>
+  );
+}
+
+// Testimonial card component
+function TestimonialCard({ quote, name, title }: { quote: string; name: string; title: string }) {
+  return (
+    <div className="card">
+      <div className="mb-4">
+        {/* Quote icon */}
+        <svg className="h-8 w-8 text-[#00A878] mb-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+        <p className="text-[#6B7280] dark:text-gray-300 italic mb-4">{quote}</p>
+      </div>
+      <div className="flex items-center">
+        <div className="w-10 h-10 bg-gray-300 dark:bg-gray-600 rounded-full mr-3"></div>
+        <div>
+          <p className="font-semibold text-[#2C3E50] dark:text-white">{name}</p>
+          <p className="text-[#6B7280] dark:text-gray-400 text-sm">{title}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FAQ Item component
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  return (
+    <div className="mb-6 border-b border-[#E6F7F3] dark:border-[#1A2F26] pb-6 last:border-b-0">
+      <h3 className="text-xl font-semibold mb-2 text-[#2C3E50] dark:text-white">{question}</h3>
+      <p className="text-[#6B7280] dark:text-gray-300">{answer}</p>
     </div>
   );
 }
