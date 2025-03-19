@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <title>SeizureGuard - Redirecting</title>
-  <meta http-equiv="refresh" content="0;url=./">
+  <meta http-equiv="refresh" content="0;url=/Website-for-EpiSafe">
   <script>
-    window.location.replace('./');
+    // Use window.location.origin to get the current domain
+    const baseUrl = window.location.origin;
+    window.location.replace(baseUrl + '/Website-for-EpiSafe');
   </script>
   <style>
     body {
@@ -26,6 +28,6 @@
   </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="./">click here</a> to go to the SeizureGuard App.</p>
+  <p>If you are not redirected automatically, <a href="/Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
 </body>
 </html> 
