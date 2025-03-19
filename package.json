@@ -2,11 +2,14 @@
   "name": "seizure-monitor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jocordova7.github.io/Website-for-EpiSafe",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build && node scripts/prepare-deploy.js",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "@types/chart.js": "^2.9.41",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.2.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
