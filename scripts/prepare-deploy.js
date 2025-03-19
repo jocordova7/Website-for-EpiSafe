@@ -12,43 +12,25 @@ if (!fs.existsSync(outDir)) {
 fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 console.log('.nojekyll file created in out directory');
 
-// Copy direct-entry.html to the root as index.html
+// Copy direct-entry.html to both locations
 try {
+  // Copy to the out directory
   fs.copyFileSync(
     path.join(__dirname, '..', 'public', 'direct-entry.html'),
     path.join(outDir, 'index.html')
   );
+  
+  // Copy to the parent directory
+  const parentIndexPath = path.join(outDir, '../index.html');
   fs.copyFileSync(
     path.join(__dirname, '..', 'public', 'direct-entry.html'),
-    path.join(outDir, '../index.html') // Also put it one level up to catch the root URL
+    parentIndexPath
   );
+  
   console.log('direct-entry.html copied as index.html to both out directory and parent directory');
 } catch (err) {
   console.error('Error copying direct-entry.html file:', err);
-  
-  // Fallback: create a simple redirect index.html
-  fs.writeFileSync(
-    path.join(outDir, 'index.html'),
-    `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>SeizureGuard - Redirecting</title>
-  <meta http-equiv="refresh" content="0;url=Website-for-EpiSafe">
-  <script>
-    // Get the current path segments
-    const pathSegments = window.location.pathname.split('/').filter(Boolean);
-    // If we're already in the repo directory, don't add it again
-    const targetPath = pathSegments.includes('Website-for-EpiSafe') ? '' : 'Website-for-EpiSafe';
-    window.location.replace(targetPath);
-  </script>
-</head>
-<body>
-  <p>If you are not redirected automatically, <a href="Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
-</body>
-</html>`
-  );
-  console.log('Created fallback index.html with redirect');
+  process.exit(1);
 }
 
 // Create a simple README.md in the out directory

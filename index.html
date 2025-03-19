@@ -2,12 +2,33 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>SeizureGuard - Redirecting</title>
-  <meta http-equiv="refresh" content="0;url=/Website-for-EpiSafe">
+  <title>SeizureGuard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    // Use window.location.origin to get the current domain
-    const baseUrl = window.location.origin;
-    window.location.replace(baseUrl + '/Website-for-EpiSafe');
+    // Determine if we need to redirect based on the current path
+    function init() {
+      const path = window.location.pathname;
+      const baseUrl = window.location.origin;
+      
+      // If we're at the root or in a subdirectory that's not the app
+      if (!path.includes('Website-for-EpiSafe')) {
+        window.location.href = baseUrl + '/Website-for-EpiSafe/';
+        return;
+      }
+      
+      // If we're already in the correct directory but missing the trailing slash
+      if (path === '/Website-for-EpiSafe') {
+        window.location.href = baseUrl + '/Website-for-EpiSafe/';
+        return;
+      }
+    }
+    
+    // Run the check after the page loads
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
   </script>
   <style>
     body {
@@ -17,17 +38,39 @@
       max-width: 600px;
       margin: 0 auto;
       color: #333;
+      background-color: #f5f5f5;
     }
-    a {
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 1rem;
+    }
+    h1 {
       color: #00A878;
-      text-decoration: none;
+      margin-bottom: 1rem;
     }
-    a:hover {
-      text-decoration: underline;
+    .button {
+      display: inline-block;
+      background-color: #00A878;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background-color 0.2s;
+    }
+    .button:hover {
+      background-color: #008c64;
     }
   </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="/Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
+  <div class="container">
+    <h1>Welcome to SeizureGuard</h1>
+    <p>Loading your application...</p>
+    <a href="/Website-for-EpiSafe/" class="button">Click here if you are not redirected automatically</a>
+  </div>
 </body>
 </html> 
