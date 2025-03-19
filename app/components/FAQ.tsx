@@ -17,49 +17,49 @@ export default function FAQ() {
     {
       id: 1,
       question: "How does the seizure detection technology work?",
-      answer: "Our technology uses advanced sensors in wearable devices to continuously monitor physiological signals including electrodermal activity (EDA), motion patterns, and heart rate. These sensors detect the subtle changes that occur during a seizure. Machine learning algorithms analyze these patterns in real-time to identify seizure activity with high accuracy and minimize false alarms.",
+      answer: "Our technology uses advanced sensors in the SeizureGuard smartwatch to continuously monitor physiological signals including electrodermal activity (EDA), motion patterns, and heart rate. These sensors detect the subtle changes that occur during a seizure. Machine learning algorithms analyze these patterns in real-time to identify seizure activity with high accuracy and minimize false alarms.",
       category: 'technology'
     },
     {
       id: 2,
       question: "What types of seizures can the device detect?",
-      answer: "The device is primarily designed to detect generalized tonic-clonic seizures, which involve convulsions and loss of consciousness. It can also detect some focal seizures with motor symptoms. It may not reliably detect absence seizures, myoclonic seizures, or seizures without motor symptoms. Our ongoing research aims to improve detection capabilities for a wider range of seizure types.",
+      answer: "The SeizureGuard smartwatch is primarily designed to detect generalized tonic-clonic seizures, which involve convulsions and loss of consciousness. It can also detect some focal seizures with motor symptoms. It may not reliably detect absence seizures, myoclonic seizures, or seizures without motor symptoms. Our ongoing research aims to improve detection capabilities for a wider range of seizure types.",
       category: 'medical'
     },
     {
       id: 3,
       question: "Is the device FDA-cleared?",
-      answer: "Yes, our seizure detection devices have received FDA clearance as medical devices for epilepsy monitoring. They meet all regulatory requirements for safety and effectiveness. The devices are also CE marked for use in Europe and approved by regulatory bodies in multiple countries worldwide.",
+      answer: "Yes, the SeizureGuard smartwatch has received FDA clearance as a medical device for epilepsy monitoring. It meets all regulatory requirements for safety and effectiveness. The device is also CE marked for use in Europe and approved by regulatory bodies in multiple countries worldwide.",
       category: 'medical'
     },
     {
       id: 4,
       question: "How accurate is the seizure detection?",
-      answer: "Clinical studies have shown our devices achieve greater than 90% sensitivity in detecting generalized tonic-clonic seizures. The false alarm rate is typically less than 1-2 per day, and ongoing algorithm improvements continue to enhance accuracy. Individual results may vary based on seizure types and patterns.",
+      answer: "Clinical studies have shown the SeizureGuard smartwatch achieves greater than 90% sensitivity in detecting generalized tonic-clonic seizures. The false alarm rate is typically less than 1-2 per day, and ongoing algorithm improvements continue to enhance accuracy. Individual results may vary based on seizure types and patterns.",
       category: 'technology'
     },
     {
       id: 5,
-      question: "Will the watch work with my smartphone?",
-      answer: "Our devices are compatible with both iOS (iPhone 6S and above with iOS 12+) and Android (version 8.0+) smartphones. The companion app requires Bluetooth connectivity and internet access for full functionality. Device compatibility is regularly updated to support newer smartphone models.",
+      question: "Will the SeizureGuard watch work with my smartphone?",
+      answer: "The SeizureGuard smartwatch is compatible with both iOS (iPhone 6S and above with iOS 12+) and Android (version 8.0+) smartphones. The companion app requires Bluetooth connectivity and internet access for full functionality. Device compatibility is regularly updated to support newer smartphone models.",
       category: 'technology'
     },
     {
       id: 6,
       question: "How long does the battery last?",
-      answer: "Battery life depends on the specific device model. The Embrace2 typically lasts 48 hours on a single charge, while the Empatica E4 lasts approximately 24 hours with continuous monitoring. Charging time is about 2 hours for a full charge. We recommend charging your device daily during periods when seizures are less likely to occur, such as during sedentary activities.",
+      answer: "Battery life depends on the specific device model. The SeizureGuard Standard Watch typically lasts 48 hours on a single charge, while the Medical Grade Watch lasts approximately 24 hours with continuous monitoring. Charging time is about 2 hours for a full charge. We recommend charging your device daily during periods when seizures are less likely to occur, such as during sedentary activities.",
       category: 'usage'
     },
     {
       id: 7,
       question: "Can I wear the device while showering or swimming?",
-      answer: "The Embrace2 is water-resistant (IPX7 rated) and can be worn in the shower or during brief immersion in water up to 1 meter deep for 30 minutes. The Empatica E4 is splash-resistant but should not be submerged. Neither device is recommended for swimming or prolonged water exposure. Always follow the specific care instructions for your device model.",
+      answer: "The SeizureGuard Standard Watch is water-resistant (IPX7 rated) and can be worn in the shower or during brief immersion in water up to 1 meter deep for 30 minutes. The Medical Grade Watch is splash-resistant but should not be submerged. Neither device is recommended for swimming or prolonged water exposure. Always follow the specific care instructions for your device model.",
       category: 'usage'
     },
     {
       id: 8,
       question: "How do I set up emergency contacts?",
-      answer: "Emergency contacts can be set up through the companion smartphone app. You can add multiple contacts who will receive alerts via phone call, SMS, or app notification when a seizure is detected. Each contact can customize their notification preferences. We recommend adding at least 3 emergency contacts to ensure someone is available to respond when needed.",
+      answer: "Emergency contacts can be set up through the SeizureGuard smartphone app. You can add multiple contacts who will receive alerts via phone call, SMS, or app notification when a seizure is detected. Each contact can customize their notification preferences. We recommend adding at least 3 emergency contacts to ensure someone is available to respond when needed.",
       category: 'usage'
     },
     {
@@ -71,7 +71,7 @@ export default function FAQ() {
     {
       id: 10,
       question: "What is the subscription cost?",
-      answer: "Our monitoring service requires a subscription that includes alert services, data storage, and access to the companion app. Monthly plans start at $9.90/month, while annual plans offer savings at $99/year. Discounts are available for families managing multiple devices. Some insurance providers offer partial or full coverage - we recommend checking with your insurance provider about eligibility.",
+      answer: "Our monitoring service requires a subscription that includes alert services, data storage, and access to the SeizureGuard app. Monthly plans start at $9.90/month, while annual plans offer savings at $99/year. Discounts are available for families managing multiple devices. Some insurance providers offer partial or full coverage - we recommend checking with your insurance provider about eligibility.",
       category: 'subscription'
     },
     {
@@ -83,7 +83,7 @@ export default function FAQ() {
     {
       id: 12,
       question: "What happens if a seizure is detected?",
-      answer: "When a seizure is detected, the system sends immediate alerts to designated caregivers through the methods they've selected (calls, SMS, app notifications). The alert includes the user's GPS location to help responders find them quickly. The system also logs the event with detailed data for later review. If enabled, the REST API can trigger smart home integrations like turning on lights or unlocking doors.",
+      answer: "When a seizure is detected, the SeizureGuard system sends immediate alerts to designated caregivers through the methods they've selected (calls, SMS, app notifications). The alert includes the user's GPS location to help responders find them quickly. The system also logs the event with detailed data for later review. If enabled, the REST API can trigger smart home integrations like turning on lights or unlocking doors.",
       category: 'usage'
     }
   ];
@@ -208,7 +208,7 @@ export default function FAQ() {
             Still have questions?
           </h3>
           <p className="text-[#6B7280] dark:text-gray-300 mb-6">
-            Our support team is available 24/7 to assist with any questions about our seizure detection devices and services.
+            Our support team is available 24/7 to assist with any questions about SeizureGuard smartwatches and services.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a

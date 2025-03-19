@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import CtaButton from "./components/EmergencyButton";
+import EmergencyButton from "./components/EmergencyButton";
 import { ToastProvider } from './context/ToastContext';
 
 const inter = Inter({
@@ -29,7 +29,7 @@ export default function RootLayout({
         <ToastProvider>
           <Navbar />
           {children}
-          <CtaButton />
+          <EmergencyButton />
         </ToastProvider>
       </body>
     </html>

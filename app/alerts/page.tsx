@@ -29,37 +29,37 @@ export default function Alerts() {
       
       // Load mock alerts data
       setAlerts([
-        {
-          id: 'alert-1',
+  {
+    id: 'alert-1',
           timestamp: '2023-07-15T14:23:00Z',
-          type: 'seizure',
-          severity: 'high',
+    type: 'seizure',
+    severity: 'high',
           duration: 45,
           device: 'Empatica E4',
           status: 'new',
-        },
-        {
-          id: 'alert-2',
+  },
+  {
+    id: 'alert-2',
           timestamp: '2023-07-10T03:17:00Z',
-          type: 'seizure',
-          severity: 'high',
+    type: 'seizure',
+    severity: 'high',
           duration: 65,
           device: 'Embrace2',
           status: 'viewed',
           notes: 'Patient was sleeping. Emergency services contacted.',
-        },
-        {
-          id: 'alert-3',
+  },
+  {
+    id: 'alert-3',
           timestamp: '2023-06-28T11:45:00Z',
           type: 'irregular_hr',
-          severity: 'medium',
+    severity: 'medium',
           duration: 30,
           device: 'Empatica E4',
           status: 'resolved',
           notes: 'False alarm - patient was exercising.',
-        },
-        {
-          id: 'alert-4',
+  },
+  {
+    id: 'alert-4',
           timestamp: '2023-06-15T19:20:00Z',
           type: 'fall',
           severity: 'medium',
@@ -67,12 +67,12 @@ export default function Alerts() {
           device: 'Embrace2',
           status: 'resolved',
           notes: 'Patient confirmed they fell but was not injured.',
-        },
-        {
-          id: 'alert-5',
+  },
+  {
+    id: 'alert-5',
           timestamp: '2023-06-02T08:10:00Z',
-          type: 'seizure',
-          severity: 'high',
+    type: 'seizure',
+    severity: 'high',
           duration: 55,
           device: 'Empatica E4',
           status: 'resolved',
@@ -194,7 +194,7 @@ export default function Alerts() {
           </div>
           
           <Link 
-            href="/settings" 
+            href="/settings"
             className="text-sm font-medium text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300"
           >
             Configure Alert Settings
@@ -319,7 +319,7 @@ export default function Alerts() {
                         {alert.notes ? 'Edit Note' : 'Add Note'}
                       </button>
                     </div>
-                  </div>
+            </div>
                 </li>
               ))}
             </ul>

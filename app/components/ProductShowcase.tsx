@@ -10,13 +10,13 @@ interface Feature {
 }
 
 export default function ProductShowcase() {
-  const [activeTab, setActiveTab] = useState<'smartwatch' | 'app'>('smartwatch');
+  const [activeTab, setActiveTab] = useState<'standard-watch' | 'medical-watch' | 'app'>('standard-watch');
   
   const deviceFeatures: Record<string, Feature[]> = {
-    'smartwatch': [
+    'standard-watch': [
       {
-        title: "Medical-Grade Seizure Detection",
-        description: "Our FDA-cleared wrist-worn wearable provides clinical-grade seizure monitoring in a stylish and comfortable form factor.",
+        title: "FDA-Cleared Seizure Detection",
+        description: "The first FDA-cleared wrist-worn wearable for seizure detection, providing clinical-grade monitoring in a stylish form factor.",
         icon: (
           <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -47,6 +47,44 @@ export default function ProductShowcase() {
         icon: (
           <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+          </svg>
+        )
+      },
+    ],
+    'medical-watch': [
+      {
+        title: "Research-Grade Sensors",
+        description: "Advanced sensors capturing EDA, PPG, 3-axis accelerometer, and temperature data for comprehensive physiological monitoring.",
+        icon: (
+          <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+          </svg>
+        )
+      },
+      {
+        title: "Streaming & Storage",
+        description: "Provides both real-time data streaming via Bluetooth and onboard memory for offline recording and later analysis.",
+        icon: (
+          <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+          </svg>
+        )
+      },
+      {
+        title: "Event Marking",
+        description: "Physical button allows users to mark events in the data stream for later correlation with physiological signals.",
+        icon: (
+          <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+        )
+      },
+      {
+        title: "Research Validated",
+        description: "Used in 1000+ published research studies, providing validated and reliable biometric data for clinical applications.",
+        icon: (
+          <svg className="w-6 h-6 text-[#00A878]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
           </svg>
         )
       },
@@ -92,12 +130,12 @@ export default function ProductShowcase() {
   };
 
   return (
-    <section id="features" className="py-16 bg-white dark:bg-gray-800">
+    <section className="py-16 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-12">
           <h2 className="section-title">Our Products</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            Advanced wearable technology and companion applications designed to provide 
+            Advanced smartwatch technology and companion applications designed to provide 
             peace of mind for epilepsy patients and their caregivers.
           </p>
         </div>
@@ -105,14 +143,24 @@ export default function ProductShowcase() {
         {/* Product Tab Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
-            onClick={() => setActiveTab('smartwatch')}
+            onClick={() => setActiveTab('standard-watch')}
             className={`px-6 py-3 rounded-full transition-colors ${
-              activeTab === 'smartwatch'
+              activeTab === 'standard-watch'
                 ? 'bg-[#00A878] text-white'
                 : 'bg-gray-100 text-[#2C3E50] hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             }`}
           >
-            SeizureGuard Smartwatch
+            SeizureGuard Watch
+          </button>
+          <button
+            onClick={() => setActiveTab('medical-watch')}
+            className={`px-6 py-3 rounded-full transition-colors ${
+              activeTab === 'medical-watch'
+                ? 'bg-[#00A878] text-white'
+                : 'bg-gray-100 text-[#2C3E50] hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
+            }`}
+          >
+            Medical Grade Watch
           </button>
           <button
             onClick={() => setActiveTab('app')}
@@ -132,10 +180,12 @@ export default function ProductShowcase() {
           <div className="bg-[#E6F7F3] dark:bg-[#1A2F26] rounded-2xl p-8 flex items-center justify-center">
             <div className="relative w-full h-[400px]">
               <Image
-                src={`/${activeTab === 'app' ? 'app-mockup' : 'smartwatch'}.jpg`}
+                src={`/${activeTab === 'app' ? 'app-mockup' : activeTab === 'standard-watch' ? 'embrace2' : 'empatica-e4'}.jpg`}
                 alt={activeTab === 'app' 
                   ? "SeizureGuard App" 
-                  : "SeizureGuard Smartwatch"}
+                  : activeTab === 'standard-watch' 
+                    ? "SeizureGuard Smartwatch" 
+                    : "Medical Grade Smartwatch"}
                 fill
                 className="object-contain"
               />
@@ -147,13 +197,17 @@ export default function ProductShowcase() {
             <h3 className="text-2xl font-bold text-[#2C3E50] dark:text-white mb-6">
               {activeTab === 'app' 
                 ? "SeizureGuard Companion App" 
-                : "SeizureGuard Smartwatch"}
+                : activeTab === 'standard-watch' 
+                  ? "SeizureGuard Watch" 
+                  : "Medical Grade Watch"}
             </h3>
             
             <p className="text-[#6B7280] dark:text-gray-300 mb-8">
               {activeTab === 'app' 
-                ? "Our companion app transforms data from the SeizureGuard Smartwatch into actionable insights, alerts, and reports." 
-                : "Our FDA-cleared smartwatch designed specifically for epilepsy monitoring with a focus on everyday wearability."}
+                ? "Our companion app transforms data from your SeizureGuard smartwatch into actionable insights, alerts, and reports." 
+                : activeTab === 'standard-watch' 
+                  ? "The FDA-cleared smartwatch designed specifically for epilepsy monitoring with a focus on everyday wearability." 
+                  : "Research-grade wearable device providing comprehensive physiological data for clinical applications."}
             </p>
             
             <div className="space-y-6">
@@ -179,7 +233,7 @@ export default function ProductShowcase() {
                 Learn More
               </button>
               <button className="btn-secondary">
-                {activeTab === 'app' ? 'Download Now' : 'Pre-Order'}
+                {activeTab === 'app' ? 'Download Now' : 'Purchase'}
               </button>
             </div>
           </div>
