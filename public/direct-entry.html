@@ -5,16 +5,19 @@
   <title>SeizureGuard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-    // Wait for the page to load
     window.addEventListener('DOMContentLoaded', function() {
       // Get the current path
-      const currentPath = window.location.pathname;
+      const path = window.location.pathname;
+      const baseUrl = window.location.origin;
       
-      // If we're at the root of the repo, load the app
-      if (currentPath === '/Website-for-EpiSafe/' || currentPath === '/Website-for-EpiSafe') {
-        // Replace the content with the app's content
+      // If we're at the root, redirect to the app
+      if (path === '/Website-for-EpiSafe' || path === '/Website-for-EpiSafe/') {
+        // Show the app content
         document.getElementById('loading').style.display = 'none';
         document.getElementById('app-content').style.display = 'block';
+      } else {
+        // Redirect to the app
+        window.location.href = baseUrl + '/Website-for-EpiSafe/';
       }
     });
   </script>
@@ -29,6 +32,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
     }
     .container {
       background-color: white;
@@ -84,8 +88,8 @@
       Our application provides real-time monitoring, instant alerts, and comprehensive health tracking.
     </p>
     <div>
-      <a href="monitoring" class="button">Live Monitoring</a>
-      <a href="alerts" class="button secondary">View Alerts</a>
+      <a href="monitoring/" class="button">Live Monitoring</a>
+      <a href="alerts/" class="button secondary">View Alerts</a>
     </div>
   </div>
   
