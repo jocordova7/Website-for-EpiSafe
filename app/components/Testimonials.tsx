@@ -24,18 +24,18 @@ export default function Testimonials() {
       name: "Sarah Johnson",
       role: "Mother of Alex, 12",
       relationship: "caregiver",
-      quote: "The alerts have been life-changing for our family. Before using SeizureGuard, we had to check on Alex multiple times each night. Now we can all sleep better knowing we'll be alerted if he has a seizure.",
+      quote: "The alerts have been life-changing for our family. Before using Embrace2, we had to check on Alex multiple times each night. Now we can all sleep better knowing we'll be alerted if he has a seizure.",
       image: "/testimonial-sarah.jpg",
-      story: "Our son Alex was diagnosed with epilepsy at age 7. His seizures often occurred at night, leaving us exhausted from constant checking and worry. The first night Alex wore his SeizureGuard watch, it detected a seizure we would have missed, allowing us to provide immediate care. Since then, the device has given our entire family peace of mind and better quality of life. Alex also loves that the watch looks like a normal smartwatch, unlike other medical devices that made him feel different from his peers."
+      story: "Our son Alex was diagnosed with epilepsy at age 7. His seizures often occurred at night, leaving us exhausted from constant checking and worry. The first night Alex wore his Embrace2, it detected a seizure we would have missed, allowing us to provide immediate care. Since then, the device has given our entire family peace of mind and better quality of life. Alex also loves that the watch looks like a normal smartwatch, unlike other medical devices that made him feel different from his peers."
     },
     {
       id: 2,
       name: "Dr. Michael Chen",
       role: "Neurologist",
       relationship: "healthcare",
-      quote: "As a neurologist, I've seen how SeizureGuard devices have transformed epilepsy management. The objective data helps me make better treatment decisions, and my patients report feeling more secure in their daily lives.",
+      quote: "As a neurologist, I've seen how Empatica's devices have transformed epilepsy management. The objective data helps me make better treatment decisions, and my patients report feeling more secure in their daily lives.",
       image: "/testimonial-doctor.jpg",
-      story: "I've prescribed SeizureGuard smartwatches to over 50 patients in my practice. The accuracy of seizure detection and the quality of the data has significantly improved my ability to provide personalized care. The detailed seizure logs and physiological data help me track medication effectiveness and make adjustments with greater precision. My patients consistently report that the devices have reduced anxiety about having undetected seizures, which has led to improved quality of life and better adherence to treatment plans."
+      story: "I've prescribed Empatica devices to over 50 patients in my practice. The accuracy of seizure detection and the quality of the data has significantly improved my ability to provide personalized care. The detailed seizure logs and physiological data help me track medication effectiveness and make adjustments with greater precision. My patients consistently report that the devices have reduced anxiety about having undetected seizures, which has led to improved quality of life and better adherence to treatment plans."
     },
     {
       id: 3,
@@ -44,16 +44,16 @@ export default function Testimonials() {
       relationship: "patient",
       quote: "After years of unpredictable seizures affecting my career and relationships, this technology has given me back my independence. My colleagues and family receive alerts when I need help, and the data helps my doctor optimize my treatment.",
       image: "/testimonial-james.jpg",
-      story: "I was forced to quit my job as a software engineer after a seizure at work led to a serious injury. My seizures were unpredictable and often occurred without warning, making it dangerous for me to be alone. Since I started wearing the SeizureGuard smartwatch, I've been able to return to full-time work, live independently, and even travel alone again. The device detected a major seizure during a business trip and automatically alerted both local emergency services and my emergency contacts. This quick response prevented complications and gave me confidence to continue pursuing my career goals."
+      story: "I was forced to quit my job as a software engineer after a seizure at work led to a serious injury. My seizures were unpredictable and often occurred without warning, making it dangerous for me to be alone. Since I started wearing the Embrace2, I've been able to return to full-time work, live independently, and even travel alone again. The device detected a major seizure during a business trip and automatically alerted both local emergency services and my emergency contacts. This quick response prevented complications and gave me confidence to continue pursuing my career goals."
     },
     {
       id: 4,
       name: "Emma Rodriguez",
       role: "College student",
       relationship: "patient",
-      quote: "Starting college with epilepsy was terrifying until I got my SeizureGuard watch. It alerts my roommate if I have a seizure, and the app helps me track potential triggers like missed sleep or stress during exams.",
+      quote: "Starting college with epilepsy was terrifying until I got my Embrace2. It alerts my roommate if I have a seizure, and the app helps me track potential triggers like missed sleep or stress during exams.",
       image: "/testimonial-emma.jpg",
-      story: "When I left home for college, both my parents and I were incredibly anxious about how I would manage my epilepsy on my own. The SeizureGuard smartwatch has been my constant companion, giving me the freedom to have a normal college experience while maintaining peace of mind. During freshman year, it detected a seizure while I was studying late in the library and alerted my designated contacts. A fellow student was able to help me until medical assistance arrived. I've also been using the seizure diary to identify patterns, which has helped me recognize that sleep deprivation and exam stress are major triggers for me."
+      story: "When I left home for college, both my parents and I were incredibly anxious about how I would manage my epilepsy on my own. The Embrace2 has been my constant companion, giving me the freedom to have a normal college experience while maintaining peace of mind. During freshman year, it detected a seizure while I was studying late in the library and alerted my designated contacts. A fellow student was able to help me until medical assistance arrived. I've also been using the seizure diary to identify patterns, which has helped me recognize that sleep deprivation and exam stress are major triggers for me."
     }
   ];
   
@@ -258,18 +258,22 @@ export default function Testimonials() {
                 />
               </div>
               
-              <div className="prose prose-lg dark:prose-invert max-w-none">
+              <blockquote className="text-lg italic text-[#2C3E50] dark:text-white mb-6 border-l-4 border-[#00A878] pl-4">
+                "{selectedStory.quote}"
+              </blockquote>
+              
+              <div className="text-[#6B7280] dark:text-gray-300 space-y-4">
                 <p>{selectedStory.story}</p>
               </div>
-              
-              <div className="mt-8 flex justify-end">
-                <button 
-                  onClick={closeModal}
-                  className="bg-[#00A878] hover:bg-[#008F63] text-white font-medium py-2 px-4 rounded-md transition-colors"
-                >
-                  Close
-                </button>
-              </div>
+            </div>
+            
+            <div className="p-6 border-t border-gray-200 dark:border-gray-700 flex justify-end">
+              <button
+                onClick={closeModal}
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-[#2C3E50] dark:text-white rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>

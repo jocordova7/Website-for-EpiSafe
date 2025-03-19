@@ -17,7 +17,7 @@ export default function TechnologyExplainer() {
     {
       id: 1,
       title: "Data Collection",
-      description: "The SeizureGuard smartwatch continuously monitors multiple physiological signals including electrodermal activity (EDA), heart rate variability, temperature, and three-axis acceleration to detect motion patterns. These sensors collect data hundreds of times per second, creating a comprehensive physiological profile.",
+      description: "Our wearable devices continuously monitor multiple physiological signals including electrodermal activity (EDA), which measures changes in the electrical properties of the skin due to sweat gland activity, heart rate variability, temperature, and three-axis acceleration to detect motion patterns. These sensors collect data hundreds of times per second, creating a comprehensive physiological profile.",
       image: "/tech-data-collection.jpg"
     },
     {
@@ -29,25 +29,25 @@ export default function TechnologyExplainer() {
     {
       id: 3,
       title: "Machine Learning Analysis",
-      description: "Our proprietary machine learning algorithms, trained on extensive datasets of seizure events, analyze the processed signals in real-time. These algorithms can distinguish between normal activities (like exercise or sleep) and actual seizures by recognizing complex patterns across multiple biosignals simultaneously. The models are continuously improved as more data is collected.",
+      description: "Our proprietary machine learning algorithms, trained on one of the world's largest datasets of seizure events, analyze the processed signals in real-time. These algorithms can distinguish between normal activities (like exercise or sleep) and actual seizures by recognizing complex patterns across multiple biosignals simultaneously. The models are continuously improved as more data is collected.",
       image: "/tech-machine-learning.jpg"
     },
     {
       id: 4,
       title: "Seizure Detection",
-      description: "When the algorithm identifies a pattern consistent with seizure activity, it triggers the detection system. The threshold for detection is carefully calibrated to maximize sensitivity (detecting actual seizures) while minimizing false alarms. The SeizureGuard technology achieves greater than 90% sensitivity for generalized tonic-clonic seizures in clinical studies.",
+      description: "When the algorithm identifies a pattern consistent with seizure activity, it triggers the detection system. The threshold for detection is carefully calibrated to maximize sensitivity (detecting actual seizures) while minimizing false alarms. Our current technology achieves greater than 90% sensitivity for generalized tonic-clonic seizures in clinical studies.",
       image: "/tech-seizure-detection.jpg"
     },
     {
       id: 5,
       title: "Alert System",
-      description: "Upon detecting a seizure, the smartwatch connects via Bluetooth to the user's smartphone, which immediately sends alerts to designated caregivers through multiple channels (calls, SMS, app notifications). The alerts include the user's GPS location and a timestamp of the event. The system is designed with redundancy to ensure alerts reach caregivers even if certain communication channels fail.",
+      description: "Upon detecting a seizure, the device connects via Bluetooth to the user's smartphone, which immediately sends alerts to designated caregivers through multiple channels (calls, SMS, app notifications). The alerts include the user's GPS location and a timestamp of the event. The system is designed with redundancy to ensure alerts reach caregivers even if certain communication channels fail.",
       image: "/tech-alert-system.jpg"
     },
     {
       id: 6,
       title: "Data Analysis & Reporting",
-      description: "Every detected seizure and the corresponding physiological data are securely stored for later review. The SeizureGuard smartphone app and web portal provide comprehensive reports showing seizure frequency, duration, time patterns, and potential correlations with other factors like sleep or medication changes. This data helps healthcare providers make more informed treatment decisions.",
+      description: "Every detected seizure and the corresponding physiological data are securely stored for later review. The companion app and web portal provide comprehensive reports showing seizure frequency, duration, time patterns, and potential correlations with other factors like sleep or medication changes. This data helps healthcare providers make more informed treatment decisions.",
       image: "/tech-data-analysis.jpg"
     }
   ];
@@ -62,7 +62,7 @@ export default function TechnologyExplainer() {
         <div className="text-center mb-16">
           <h2 className="section-title">How Our Technology Works</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            The SeizureGuard app uses advanced seizure detection technology with multiple biosensors and 
+            Our advanced seizure detection system uses multiple biosensors combined with 
             proprietary algorithms to provide accurate and timely seizure alerts.
           </p>
         </div>

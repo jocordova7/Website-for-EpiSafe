@@ -15,10 +15,8 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // In GitHub Pages, we're already in the repository path context
-  // so we don't need to add the basePath again
-  assetPrefix: '',
-  basePath: '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
+  basePath: isProd ? `/${repoName}` : '',
   trailingSlash: true, // This helps with GitHub Pages serving
   output: 'export',
   eslint: {

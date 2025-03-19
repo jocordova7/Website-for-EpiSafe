@@ -10,10 +10,10 @@ interface Feature {
 }
 
 export default function ProductShowcase() {
-  const [activeTab, setActiveTab] = useState<'standard-watch' | 'medical-watch' | 'app'>('standard-watch');
+  const [activeTab, setActiveTab] = useState<'empatica-e4' | 'embrace2' | 'app'>('embrace2');
   
   const deviceFeatures: Record<string, Feature[]> = {
-    'standard-watch': [
+    'embrace2': [
       {
         title: "FDA-Cleared Seizure Detection",
         description: "The first FDA-cleared wrist-worn wearable for seizure detection, providing clinical-grade monitoring in a stylish form factor.",
@@ -51,7 +51,7 @@ export default function ProductShowcase() {
         )
       },
     ],
-    'medical-watch': [
+    'empatica-e4': [
       {
         title: "Research-Grade Sensors",
         description: "Advanced sensors capturing EDA, PPG, 3-axis accelerometer, and temperature data for comprehensive physiological monitoring.",
@@ -133,9 +133,9 @@ export default function ProductShowcase() {
     <section className="py-16 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-12">
-          <h2 className="section-title">Our Products</h2>
+          <h2 className="section-title">Discover Our Products</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            Advanced smartwatch technology and companion applications designed to provide 
+            Advanced wearable technology and companion applications designed to provide 
             peace of mind for epilepsy patients and their caregivers.
           </p>
         </div>
@@ -143,24 +143,24 @@ export default function ProductShowcase() {
         {/* Product Tab Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
-            onClick={() => setActiveTab('standard-watch')}
+            onClick={() => setActiveTab('embrace2')}
             className={`px-6 py-3 rounded-full transition-colors ${
-              activeTab === 'standard-watch'
+              activeTab === 'embrace2'
                 ? 'bg-[#00A878] text-white'
                 : 'bg-gray-100 text-[#2C3E50] hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             }`}
           >
-            SeizureGuard Watch
+            Embrace2
           </button>
           <button
-            onClick={() => setActiveTab('medical-watch')}
+            onClick={() => setActiveTab('empatica-e4')}
             className={`px-6 py-3 rounded-full transition-colors ${
-              activeTab === 'medical-watch'
+              activeTab === 'empatica-e4'
                 ? 'bg-[#00A878] text-white'
                 : 'bg-gray-100 text-[#2C3E50] hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             }`}
           >
-            Medical Grade Watch
+            Empatica E4
           </button>
           <button
             onClick={() => setActiveTab('app')}
@@ -170,7 +170,7 @@ export default function ProductShowcase() {
                 : 'bg-gray-100 text-[#2C3E50] hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600'
             }`}
           >
-            SeizureGuard App
+            Companion App
           </button>
         </div>
 
@@ -180,12 +180,12 @@ export default function ProductShowcase() {
           <div className="bg-[#E6F7F3] dark:bg-[#1A2F26] rounded-2xl p-8 flex items-center justify-center">
             <div className="relative w-full h-[400px]">
               <Image
-                src={`/${activeTab === 'app' ? 'app-mockup' : activeTab === 'standard-watch' ? 'embrace2' : 'empatica-e4'}.jpg`}
+                src={`/${activeTab === 'app' ? 'app-mockup' : activeTab}.jpg`}
                 alt={activeTab === 'app' 
                   ? "SeizureGuard App" 
-                  : activeTab === 'standard-watch' 
-                    ? "SeizureGuard Smartwatch" 
-                    : "Medical Grade Smartwatch"}
+                  : activeTab === 'embrace2' 
+                    ? "Embrace2 Smartwatch" 
+                    : "Empatica E4 Wristband"}
                 fill
                 className="object-contain"
               />
@@ -197,15 +197,15 @@ export default function ProductShowcase() {
             <h3 className="text-2xl font-bold text-[#2C3E50] dark:text-white mb-6">
               {activeTab === 'app' 
                 ? "SeizureGuard Companion App" 
-                : activeTab === 'standard-watch' 
-                  ? "SeizureGuard Watch" 
-                  : "Medical Grade Watch"}
+                : activeTab === 'embrace2' 
+                  ? "Embrace2 Smartwatch" 
+                  : "Empatica E4 Wristband"}
             </h3>
             
             <p className="text-[#6B7280] dark:text-gray-300 mb-8">
               {activeTab === 'app' 
-                ? "Our companion app transforms data from your SeizureGuard smartwatch into actionable insights, alerts, and reports." 
-                : activeTab === 'standard-watch' 
+                ? "Our companion app transforms data from your Empatica device into actionable insights, alerts, and reports." 
+                : activeTab === 'embrace2' 
                   ? "The FDA-cleared smartwatch designed specifically for epilepsy monitoring with a focus on everyday wearability." 
                   : "Research-grade wearable device providing comprehensive physiological data for clinical applications."}
             </p>

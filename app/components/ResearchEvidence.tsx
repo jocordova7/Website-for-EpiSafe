@@ -85,7 +85,7 @@ export default function ResearchEvidence() {
         <div className="text-center mb-12">
           <h2 className="section-title">Clinical Research & Validation</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            SeizureGuard technology is backed by extensive clinical research and validation studies
+            Our technology is backed by extensive clinical research and validation studies
             published in leading medical journals.
           </p>
         </div>
@@ -96,7 +96,7 @@ export default function ResearchEvidence() {
               Evidence-Based Technology
             </h3>
             <p className="text-[#6B7280] dark:text-gray-300 mb-4">
-              The SeizureGuard detection algorithms have been validated in multiple clinical studies,
+              Our seizure detection algorithms have been validated in multiple clinical studies,
               demonstrating high sensitivity and specificity in real-world environments.
             </p>
             
@@ -108,7 +108,7 @@ export default function ResearchEvidence() {
                 <div className="ml-3">
                   <h4 className="text-lg font-medium text-[#2C3E50] dark:text-white">FDA Cleared</h4>
                   <p className="text-[#6B7280] dark:text-gray-300">
-                    Our smartwatch-based seizure detection system has received FDA clearance for epilepsy monitoring.
+                    First wrist-worn seizure detection system to receive FDA clearance for epilepsy monitoring.
                   </p>
                 </div>
               </div>

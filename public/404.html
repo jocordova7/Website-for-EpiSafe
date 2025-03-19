@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>SeizureGuard - Page Not Found</title>
+    <script>
+      // For GitHub Pages SPA routing
+      var pathSegmentsToKeep = 1; // Keep the repo name segment
+      var repo = '/Website-for-EpiSafe';
+      
+      var l = window.location;
+      var redirectPath = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') + repo;
+      
+      // Redirect to the main app page
+      window.location.href = redirectPath;
+    </script>
     <style>
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -11,43 +22,22 @@
         max-width: 600px;
         margin: 0 auto;
         color: #333;
-        line-height: 1.6;
       }
       h1 {
         color: #00A878;
       }
-      .button {
-        display: inline-block;
-        background-color: #00A878;
-        color: white;
+      a {
+        color: #00A878;
         text-decoration: none;
-        padding: 12px 24px;
-        border-radius: 4px;
-        font-weight: bold;
-        margin: 8px;
-        transition: background-color 0.3s;
       }
-      .button:hover {
-        background-color: #008F63;
-      }
-      p {
-        margin-bottom: 20px;
+      a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <h1>Page Not Found</h1>
     <p>The page you're looking for doesn't exist or has been moved.</p>
-    <p>Choose one of these options to navigate to a working page:</p>
-    
-    <div>
-      <a href="https://jocordova7.github.io/Website-for-EpiSafe/" class="button">Home Page</a>
-    </div>
-    <div style="margin-top: 20px;">
-      <a href="https://jocordova7.github.io/Website-for-EpiSafe/monitoring/" class="button">Monitoring</a>
-    </div>
-    <div style="margin-top: 20px;">
-      <a href="https://jocordova7.github.io/Website-for-EpiSafe/alerts/" class="button">Alerts</a>
-    </div>
+    <p>If you are not redirected automatically, <a href="https://jocordova7.github.io/Website-for-EpiSafe/">click here</a> to go to the SeizureGuard App.</p>
   </body>
 </html> 
