@@ -7,9 +7,16 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true, // Disable default image optimization for static export
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   assetPrefix: isProd ? `/${repoName}/` : '',
   basePath: isProd ? `/${repoName}` : '',
+  trailingSlash: true, // This helps with GitHub Pages serving
   output: 'export',
   eslint: {
     // Disable ESLint during production builds

@@ -9,31 +9,32 @@ if (!fs.existsSync(outDir)) {
 }
 
 // Copy .nojekyll file to out directory
-fs.copyFile(
-  path.join(__dirname, '..', 'public', '.nojekyll'),
-  path.join(outDir, '.nojekyll'),
-  (err) => {
-    if (err) {
-      console.error('Error copying .nojekyll file:', err);
-      process.exit(1);
-    }
-    console.log('.nojekyll file copied to out directory');
-  }
-);
+fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
+console.log('.nojekyll file created in out directory');
 
-// Copy the GitHub Pages specific index.html to the root directory (outside the basePath)
-// This is key to make GitHub Pages work with Next.js basePath
+// Copy index.html from public directory to out directory
 try {
   fs.copyFileSync(
-    path.join(__dirname, '..', 'public', 'index-gh-pages.html'),
-    path.join(path.dirname(outDir), 'index.html')
+    path.join(__dirname, '..', 'public', 'index.html'),
+    path.join(outDir, 'index.html')
   );
-  console.log('GitHub Pages index file copied to root directory');
+  console.log('index.html copied to out directory');
 } catch (err) {
-  console.error('Error copying GitHub Pages index file:', err);
+  console.error('Error copying index.html file:', err);
 }
 
-// Create a simple README.md in the out directory to avoid confusion
+// Copy 404.html from public directory to out directory
+try {
+  fs.copyFileSync(
+    path.join(__dirname, '..', 'public', '404.html'),
+    path.join(outDir, '404.html')
+  );
+  console.log('404.html copied to out directory');
+} catch (err) {
+  console.error('Error copying 404.html file:', err);
+}
+
+// Create a simple README.md in the out directory
 fs.writeFileSync(
   path.join(outDir, 'README.md'),
   `# SeizureGuard App
@@ -42,34 +43,45 @@ This directory contains the built files for the SeizureGuard application.
 The main application entry point is index.html.
 `
 );
+console.log('README.md file created in out directory');
 
-// Ensure that GitHub Pages knows this is not a project page but an app
-// by creating an empty gh-pages-hack.js file
+// Create a redirect index.html file at the root of the gh-pages branch
+// This will help with GitHub Pages serving
 fs.writeFileSync(
-  path.join(outDir, 'gh-pages-redirect.js'),
-  `
-// This hack ensures GitHub Pages correctly serves the index.html at the root
-// and not the README from the main branch
-window.location.href = window.location.pathname.replace(/\\/$/, '') + '/index.html';
-`
-);
-
-// Create a simple index.html that redirects to the app
-fs.writeFileSync(
-  path.join(outDir, 'gh-pages-redirect.html'),
+  path.join(outDir, 'index.html'),
   `<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0;url=index.html">
-  <title>Redirecting to SeizureGuard</title>
+  <meta charset="utf-8">
+  <title>SeizureGuard - Epilepsy Monitoring App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0;url=./index.html">
   <script>
-    window.location.href = "index.html";
+    window.location.href = './index.html';
   </script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      text-align: center;
+      padding-top: 50px;
+    }
+    a {
+      color: #00A878;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="index.html">click here</a>.</p>
+  <p>If you are not redirected automatically, <a href="./index.html">click here</a> to access the SeizureGuard App.</p>
 </body>
-</html>
-`
-); 
+</html>`
+);
+console.log('Redirect index.html file created in out directory'); 

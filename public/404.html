@@ -9,19 +9,22 @@
       // This script takes the current URL and converts the path and query
       // string into just a query string, then redirects to the root path with
       // that query string attached.
-      var pathSegmentsToKeep = 1;
-
+      var segmentCount = 1; // Change this to 0 for a custom domain
+      
       var l = window.location;
+      var repo = '/Website-for-EpiSafe';
+      
+      // Redirect to the index page with the proper path
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        repo + '/?p=/' +
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
     </script>
   </head>
   <body>
-    <p>If you are not redirected automatically, <a href="/">click here</a>.</p>
+    <p>If you are not redirected automatically, <a href="https://jocordova7.github.io/Website-for-EpiSafe/">click here</a> to go to the SeizureGuard App.</p>
   </body>
 </html> 
