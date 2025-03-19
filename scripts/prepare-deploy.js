@@ -34,13 +34,13 @@ try {
 <head>
   <meta charset="utf-8">
   <title>SeizureGuard - Redirecting</title>
-  <meta http-equiv="refresh" content="0;url=./Website-for-EpiSafe">
+  <meta http-equiv="refresh" content="0;url=./">
   <script>
-    window.location.replace('./Website-for-EpiSafe');
+    window.location.replace('./');
   </script>
 </head>
 <body>
-  <p>If you are not redirected automatically, <a href="./Website-for-EpiSafe">click here</a> to go to the SeizureGuard App.</p>
+  <p>If you are not redirected automatically, <a href="./">click here</a> to go to the SeizureGuard App.</p>
 </body>
 </html>`
   );
