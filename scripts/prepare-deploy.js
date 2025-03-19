@@ -12,11 +12,36 @@ if (!fs.existsSync(outDir)) {
 fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 console.log('.nojekyll file created');
 
-// Create 404.html that serves the app's 404 page
-fs.copyFileSync(
+// Create 404.html that redirects to the main app
+fs.writeFileSync(
   path.join(outDir, '404.html'),
-  path.join(outDir, '404.html')
+  `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SeizureGuard - Page Not Found</title>
+  <script>
+    window.location.href = '/Website-for-EpiSafe/';
+  </script>
+</head>
+<body>
+  <p>Redirecting to homepage...</p>
+</body>
+</html>`
 );
+
+// Copy the index.html from the root of the out directory
+try {
+  // Make sure we preserve the original index.html
+  if (fs.existsSync(path.join(outDir, 'index.html'))) {
+    fs.copyFileSync(
+      path.join(outDir, 'index.html'),
+      path.join(outDir, 'index.original.html')
+    );
+  }
+} catch (err) {
+  console.warn('Warning: Could not backup original index.html');
+}
 
 // Create a simple README.md
 fs.writeFileSync(

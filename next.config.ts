@@ -15,8 +15,9 @@ const nextConfig: NextConfig = {
     ],
   },
   basePath: isProd ? `/${repoName}` : '',
+  assetPrefix: isProd ? `/${repoName}/` : '',
   output: 'export',
-  distDir: 'dist',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
