@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
-    domains: ['jocordova7.github.io'],
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,11 +14,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  assetPrefix: isProd ? `/${repoName}` : '',
   basePath: isProd ? `/${repoName}` : '',
-  trailingSlash: true,
   output: 'export',
-  // Disable all checks during build for faster deployment
+  distDir: 'dist',
   eslint: {
     ignoreDuringBuilds: true,
   },
