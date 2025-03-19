@@ -17,7 +17,7 @@ export default function TechnologyExplainer() {
     {
       id: 1,
       title: "Data Collection",
-      description: "Our wearable devices continuously monitor multiple physiological signals including electrodermal activity (EDA), which measures changes in the electrical properties of the skin due to sweat gland activity, heart rate variability, temperature, and three-axis acceleration to detect motion patterns. These sensors collect data hundreds of times per second, creating a comprehensive physiological profile.",
+      description: "The SeizureGuard smartwatch continuously monitors multiple physiological signals including electrodermal activity (EDA), which measures changes in the electrical properties of the skin due to sweat gland activity, heart rate variability, temperature, and three-axis acceleration to detect motion patterns. These sensors collect data hundreds of times per second, creating a comprehensive physiological profile.",
       image: "/tech-data-collection.jpg"
     },
     {
@@ -35,19 +35,19 @@ export default function TechnologyExplainer() {
     {
       id: 4,
       title: "Seizure Detection",
-      description: "When the algorithm identifies a pattern consistent with seizure activity, it triggers the detection system. The threshold for detection is carefully calibrated to maximize sensitivity (detecting actual seizures) while minimizing false alarms. Our current technology achieves greater than 90% sensitivity for generalized tonic-clonic seizures in clinical studies.",
+      description: "When the algorithm identifies a pattern consistent with seizure activity, it triggers the detection system. The threshold for detection is carefully calibrated to maximize sensitivity (detecting actual seizures) while minimizing false alarms. Our technology achieves greater than 90% sensitivity for generalized tonic-clonic seizures in clinical studies.",
       image: "/tech-seizure-detection.jpg"
     },
     {
       id: 5,
       title: "Alert System",
-      description: "Upon detecting a seizure, the device connects via Bluetooth to the user's smartphone, which immediately sends alerts to designated caregivers through multiple channels (calls, SMS, app notifications). The alerts include the user's GPS location and a timestamp of the event. The system is designed with redundancy to ensure alerts reach caregivers even if certain communication channels fail.",
+      description: "Upon detecting a seizure, the SeizureGuard smartwatch connects via Bluetooth to the user's smartphone, which immediately sends alerts to designated caregivers through multiple channels (calls, SMS, app notifications). The alerts include the user's GPS location and a timestamp of the event. The system is designed with redundancy to ensure alerts reach caregivers even if certain communication channels fail.",
       image: "/tech-alert-system.jpg"
     },
     {
       id: 6,
       title: "Data Analysis & Reporting",
-      description: "Every detected seizure and the corresponding physiological data are securely stored for later review. The companion app and web portal provide comprehensive reports showing seizure frequency, duration, time patterns, and potential correlations with other factors like sleep or medication changes. This data helps healthcare providers make more informed treatment decisions.",
+      description: "Every detected seizure and the corresponding physiological data are securely stored for later review. The SeizureGuard app and web portal provide comprehensive reports showing seizure frequency, duration, time patterns, and potential correlations with other factors like sleep or medication changes. This data helps healthcare providers make more informed treatment decisions.",
       image: "/tech-data-analysis.jpg"
     }
   ];
@@ -57,13 +57,13 @@ export default function TechnologyExplainer() {
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-900">
+    <section id="howitworks" className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-16">
-          <h2 className="section-title">How Our Technology Works</h2>
+          <h2 className="section-title">Revolutionary Technology</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            Our advanced seizure detection system uses multiple biosensors combined with 
-            proprietary algorithms to provide accurate and timely seizure alerts.
+            The SeizureGuard app is powered by breakthrough technology that combines wearable sensors 
+            with advanced AI to deliver unprecedented seizure detection accuracy.
           </p>
         </div>
         
@@ -165,7 +165,7 @@ export default function TechnologyExplainer() {
             
             <div className="mt-8 bg-[#F9FAFB] dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-medium text-[#2C3E50] dark:text-white mb-3">
-                Key Performance Metrics
+                Why Choose SeizureGuard?
               </h3>
               <ul className="space-y-2 text-[#6B7280] dark:text-gray-300">
                 <li className="flex items-center">
@@ -190,7 +190,7 @@ export default function TechnologyExplainer() {
                   <svg className="w-5 h-5 text-[#00A878] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Battery life up to 48 hours of continuous monitoring</span>
+                  <span>Up to 10 days of smartwatch battery life</span>
                 </li>
               </ul>
             </div>

@@ -23,18 +23,18 @@ export default function Home() {
               SeizureGuard provides real-time monitoring and alerts for epilepsy patients using advanced AI and wearable technology. Get peace of mind for yourself and your loved ones.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/monitoring" 
+              <a 
+                href="#contact" 
                 className="btn-primary text-center"
               >
-                Start Monitoring
-              </Link>
-              <Link 
+                Get the App
+              </a>
+              <a 
                 href="#features" 
                 className="btn-secondary text-center"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </div>
           <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
@@ -106,7 +106,7 @@ export default function Home() {
       <FAQ />
 
       {/* Call to Action */}
-      <section className="py-16 bg-[#00A878] dark:bg-[#008F63]">
+      <section id="contact" className="py-16 bg-[#00A878] dark:bg-[#008F63]">
         <div className="container mx-auto px-6 md:px-10 lg:px-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -114,12 +114,40 @@ export default function Home() {
           <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
             Join thousands of users who trust SeizureGuard for advanced seizure detection and monitoring.
           </p>
-          <Link 
-            href="/monitoring" 
-            className="bg-white hover:bg-gray-100 text-[#00A878] font-medium py-3 px-8 rounded-md transition-colors inline-block"
-          >
-            Start Your Free Trial
-          </Link>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                alert('This would redirect to the App Store');
+              }}
+              className="bg-white hover:bg-gray-100 text-[#00A878] font-medium py-3 px-8 rounded-md transition-colors inline-block"
+            >
+              Download for iOS
+            </a>
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                alert('This would redirect to Google Play');
+              }}
+              className="bg-white hover:bg-gray-100 text-[#00A878] font-medium py-3 px-8 rounded-md transition-colors inline-block"
+            >
+              Download for Android
+            </a>
+          </div>
+          <div className="mt-12">
+            <h3 className="text-xl text-white mb-4">Contact Us</h3>
+            <p className="text-white/90 mb-6">
+              Have questions about SeizureGuard? Reach out to our team.
+            </p>
+            <a 
+              href="mailto:info@seizureguard.com" 
+              className="text-white underline hover:text-white/80"
+            >
+              info@seizureguard.com
+            </a>
+          </div>
         </div>
       </section>
     </main>

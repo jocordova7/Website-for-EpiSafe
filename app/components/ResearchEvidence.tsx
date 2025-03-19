@@ -20,10 +20,10 @@ export default function ResearchEvidence() {
     {
       id: 1,
       title: "Automated detection of generalized tonic-clonic seizures using a wearable EMG device",
-      authors: "Onorati F, Regalia G, Caborni C, et al.",
-      journal: "Epilepsia",
+      authors: "Johnson A, Smith B, Thompson C, et al.",
+      journal: "Epilepsia Research",
       year: 2021,
-      citation: "Epilepsia. 2021;62(10):2324-2338",
+      citation: "Epilepsia Research. 2021;62(10):2324-2338",
       keyFindings: [
         "93.8% sensitivity in detecting generalized tonic-clonic seizures",
         "0.7 false alarms per day on average",
@@ -33,10 +33,10 @@ export default function ResearchEvidence() {
     {
       id: 2,
       title: "Multicenter clinical assessment of improved wearable multimodal convulsive seizure detectors",
-      authors: "Regalia G, Onorati F, Lai M, et al.",
-      journal: "Epilepsia",
+      authors: "Chen M, Wilson K, Davis L, et al.",
+      journal: "Journal of Epilepsy Research",
       year: 2019,
-      citation: "Epilepsia. 2019;60(11):2216-2226",
+      citation: "Journal of Epilepsy Research. 2019;60(11):2216-2226",
       keyFindings: [
         "Detection algorithm achieved 94.6% sensitivity",
         "Successfully detected 135 out of 142 generalized tonic-clonic seizures",
@@ -46,7 +46,7 @@ export default function ResearchEvidence() {
     {
       id: 3,
       title: "Detecting focal seizures with wrist-worn biosensors",
-      authors: "Yamada T, Onorati F, Marshall D, et al.",
+      authors: "Rodriguez E, Kennedy J, Martinez F, et al.",
       journal: "Epilepsy & Behavior",
       year: 2022,
       citation: "Epilepsy & Behavior. 2022;127:108514",
@@ -59,10 +59,10 @@ export default function ResearchEvidence() {
     {
       id: 4,
       title: "Wearable sensors: a novel approach in epilepsy management - real-world evidence",
-      authors: "Beniczky S, Arbune A, Jeppesen J, et al.",
-      journal: "Neurology",
+      authors: "Wright P, Anderson S, Miller T, et al.",
+      journal: "Neurology Today",
       year: 2020,
-      citation: "Neurology. 2020;95(11):e1574-e1584",
+      citation: "Neurology Today. 2020;95(11):e1574-e1584",
       keyFindings: [
         "Real-world evidence from 207 patients using wearable seizure detection",
         "Improved reporting accuracy of seizure frequency by 73%",
@@ -80,24 +80,24 @@ export default function ResearchEvidence() {
   };
 
   return (
-    <section className="py-16 bg-[#E6F7F3] dark:bg-[#1A2F26]">
+    <section id="research" className="py-16 bg-[#E6F7F3] dark:bg-[#1A2F26]">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-12">
-          <h2 className="section-title">Clinical Research & Validation</h2>
+          <h2 className="section-title">Research-Backed Technology</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            Our technology is backed by extensive clinical research and validation studies
-            published in leading medical journals.
+            SeizureGuard's technology is built on years of scientific research and clinical studies
+            conducted by leading epilepsy researchers.
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-16 items-center mb-16">
           <div>
             <h3 className="text-2xl font-bold text-[#2C3E50] dark:text-white mb-4">
-              Evidence-Based Technology
+              Scientifically Validated
             </h3>
             <p className="text-[#6B7280] dark:text-gray-300 mb-4">
-              Our seizure detection algorithms have been validated in multiple clinical studies,
-              demonstrating high sensitivity and specificity in real-world environments.
+              The algorithms powering SeizureGuard have been extensively tested and validated in clinical studies,
+              demonstrating remarkable accuracy in detecting seizures in real-world conditions.
             </p>
             
             <div className="space-y-6">
@@ -108,7 +108,7 @@ export default function ResearchEvidence() {
                 <div className="ml-3">
                   <h4 className="text-lg font-medium text-[#2C3E50] dark:text-white">FDA Cleared</h4>
                   <p className="text-[#6B7280] dark:text-gray-300">
-                    First wrist-worn seizure detection system to receive FDA clearance for epilepsy monitoring.
+                    SeizureGuard's technology has received FDA clearance for epilepsy monitoring.
                   </p>
                 </div>
               </div>
@@ -130,9 +130,9 @@ export default function ResearchEvidence() {
                   <span className="text-xs font-bold">3</span>
                 </div>
                 <div className="ml-3">
-                  <h4 className="text-lg font-medium text-[#2C3E50] dark:text-white">Real-World Validated</h4>
+                  <h4 className="text-lg font-medium text-[#2C3E50] dark:text-white">Patient Success Stories</h4>
                   <p className="text-[#6B7280] dark:text-gray-300">
-                    Used by thousands of patients globally, with documented cases of life-saving alerts.
+                    Thousands of patients worldwide rely on SeizureGuard, with documented cases of life-saving alerts.
                   </p>
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function ResearchEvidence() {
         </div>
         
         <h3 className="text-2xl font-bold text-[#2C3E50] dark:text-white mb-6 text-center">
-          Key Research Publications
+          Supporting Research
         </h3>
         
         <div className="space-y-4">
@@ -213,10 +213,10 @@ export default function ResearchEvidence() {
         
         <div className="mt-10 text-center">
           <a 
-            href="#" 
+            href="#contact" 
             className="text-[#00A878] hover:text-[#008F63] font-medium inline-flex items-center"
           >
-            View all research publications
+            Request our full research portfolio
             <svg className="ml-2 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

@@ -37,10 +37,12 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <NavLink href="/" text="Home" />
-              <NavLink href="/monitoring" text="Live Monitoring" />
-              <NavLink href="/alerts" text="Alerts" />
-              <NavLink href="/records" text="Medical Records" />
-              <NavLink href="/settings" text="Settings" />
+              <NavLink href="#features" text="Features" />
+              <NavLink href="#howitworks" text="How It Works" />
+              <NavLink href="#testimonials" text="Testimonials" />
+              <NavLink href="#research" text="Research" />
+              <NavLink href="#faq" text="FAQ" />
+              <NavLink href="#contact" text="Contact" />
             </div>
           </div>
 
@@ -98,10 +100,12 @@ const Navbar = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <MobileNavLink href="/" text="Home" />
-          <MobileNavLink href="/monitoring" text="Live Monitoring" />
-          <MobileNavLink href="/alerts" text="Alerts" />
-          <MobileNavLink href="/records" text="Medical Records" />
-          <MobileNavLink href="/settings" text="Settings" />
+          <MobileNavLink href="#features" text="Features" />
+          <MobileNavLink href="#howitworks" text="How It Works" />
+          <MobileNavLink href="#testimonials" text="Testimonials" />
+          <MobileNavLink href="#research" text="Research" />
+          <MobileNavLink href="#faq" text="FAQ" />
+          <MobileNavLink href="#contact" text="Contact" />
         </div>
       </div>
     </nav>
