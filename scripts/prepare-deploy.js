@@ -12,22 +12,13 @@ if (!fs.existsSync(outDir)) {
 fs.writeFileSync(path.join(outDir, '.nojekyll'), '');
 console.log('.nojekyll file created in out directory');
 
-// Copy direct-entry.html to both locations
+// Copy direct-entry.html as index.html to the out directory
 try {
-  // Copy to the out directory
   fs.copyFileSync(
     path.join(__dirname, '..', 'public', 'direct-entry.html'),
     path.join(outDir, 'index.html')
   );
-  
-  // Copy to the parent directory
-  const parentIndexPath = path.join(outDir, '../index.html');
-  fs.copyFileSync(
-    path.join(__dirname, '..', 'public', 'direct-entry.html'),
-    parentIndexPath
-  );
-  
-  console.log('direct-entry.html copied as index.html to both out directory and parent directory');
+  console.log('direct-entry.html copied as index.html to out directory');
 } catch (err) {
   console.error('Error copying direct-entry.html file:', err);
   process.exit(1);
