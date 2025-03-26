@@ -16,39 +16,39 @@ export default function TechnologyExplainer() {
   const techSteps: TechStep[] = [
     {
       id: 1,
-      title: "Data Collection",
-      description: "Our wearable devices continuously monitor multiple physiological signals including electrodermal activity (EDA), which measures changes in the electrical properties of the skin due to sweat gland activity, heart rate variability, temperature, and three-axis acceleration to detect motion patterns. These sensors collect data hundreds of times per second, creating a comprehensive physiological profile.",
-      image: "/tech-data-collection.jpg"
+      title: "Android Smartwatch Sensors",
+      description: "EpiSave leverages the built-in sensors in your Android smartwatch, including accelerometers, gyroscopes, and heart rate monitors, to detect motion patterns and physiological changes. The app intelligently optimizes sensor usage to balance accuracy with battery life, enabling all-day monitoring without excessive drain.",
+      image: "/tech-android-sensors.jpg"
     },
     {
       id: 2,
-      title: "Signal Processing",
-      description: "The raw sensor data is processed using advanced signal processing techniques to filter noise and extract meaningful features. Our algorithms identify specific patterns in these signals that correlate with seizure activity, such as sudden changes in heart rate, distinctive movement patterns, and the characteristic surge in electrodermal activity that occurs during convulsive seizures.",
-      image: "/tech-signal-processing.jpg"
+      title: "Real-Time Analysis",
+      description: "EpiSave continuously analyzes sensor data directly on your Android device. Our lightweight algorithms are specially optimized for Android's processing capabilities, ensuring efficient performance even on older smartwatch models. This on-device processing means your watch can detect seizure patterns even when temporarily disconnected from your phone.",
+      image: "/tech-real-time-analysis.jpg"
     },
     {
       id: 3,
-      title: "Machine Learning Analysis",
-      description: "Our proprietary machine learning algorithms, trained on one of the world's largest datasets of seizure events, analyze the processed signals in real-time. These algorithms can distinguish between normal activities (like exercise or sleep) and actual seizures by recognizing complex patterns across multiple biosignals simultaneously. The models are continuously improved as more data is collected.",
+      title: "Machine Learning Detection",
+      description: "Our Android-optimized machine learning algorithms have been trained on thousands of seizure events to recognize the unique motion and physiological patterns that occur during different types of seizures. The algorithms are designed to distinguish between normal activities (like exercise or sleep) and actual seizure movements.",
       image: "/tech-machine-learning.jpg"
     },
     {
       id: 4,
-      title: "Seizure Detection",
-      description: "When the algorithm identifies a pattern consistent with seizure activity, it triggers the detection system. The threshold for detection is carefully calibrated to maximize sensitivity (detecting actual seizures) while minimizing false alarms. Our current technology achieves greater than 90% sensitivity for generalized tonic-clonic seizures in clinical studies.",
-      image: "/tech-seizure-detection.jpg"
+      title: "Android Wear OS Integration",
+      description: "EpiSave is seamlessly integrated with Android's Wear OS platform, providing intuitive notifications and vibration feedback directly on your wrist. The watch interface is designed to be easily accessible during a pre-seizure aura, allowing users to quickly confirm or cancel alerts before they're sent to caregivers.",
+      image: "/tech-wear-os.jpg"
     },
     {
       id: 5,
-      title: "Alert System",
-      description: "Upon detecting a seizure, the device connects via Bluetooth to the user's smartphone, which immediately sends alerts to designated caregivers through multiple channels (calls, SMS, app notifications). The alerts include the user's GPS location and a timestamp of the event. The system is designed with redundancy to ensure alerts reach caregivers even if certain communication channels fail.",
-      image: "/tech-alert-system.jpg"
+      title: "Multi-Channel Alerts",
+      description: "When a seizure is detected, EpiSave uses Android's robust notification system to alert caregivers through multiple channels. The app sends SMS messages, app notifications, and can even initiate phone calls with automated messages. The alert includes your GPS location from your Android device for quick locating in emergencies.",
+      image: "/tech-android-alerts.jpg"
     },
     {
       id: 6,
-      title: "Data Analysis & Reporting",
-      description: "Every detected seizure and the corresponding physiological data are securely stored for later review. The companion app and web portal provide comprehensive reports showing seizure frequency, duration, time patterns, and potential correlations with other factors like sleep or medication changes. This data helps healthcare providers make more informed treatment decisions.",
-      image: "/tech-data-analysis.jpg"
+      title: "Android Health Integration",
+      description: "EpiSave works with Google Fit and other Android health platforms to provide a comprehensive view of your health. By correlating seizure events with sleep quality, activity levels, and other health metrics, you can identify potential triggers and share more complete information with your healthcare providers.",
+      image: "/tech-health-integration.jpg"
     }
   ];
   
@@ -57,13 +57,13 @@ export default function TechnologyExplainer() {
   };
 
   return (
-    <section className="py-16 bg-white dark:bg-gray-900">
+    <section id="how-it-works" className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6 md:px-10 lg:px-16">
         <div className="text-center mb-16">
-          <h2 className="section-title">How Our Technology Works</h2>
+          <h2 className="section-title">EpiSave Technology</h2>
           <p className="max-w-3xl mx-auto text-[#6B7280] dark:text-gray-300">
-            Our advanced seizure detection system uses multiple biosensors combined with 
-            proprietary algorithms to provide accurate and timely seizure alerts.
+            Discover how EpiSave transforms your Android smartwatch into a 
+            powerful seizure detection device using advanced technology.
           </p>
         </div>
         
@@ -165,92 +165,105 @@ export default function TechnologyExplainer() {
             
             <div className="mt-8 bg-[#F9FAFB] dark:bg-gray-800 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
               <h3 className="text-lg font-medium text-[#2C3E50] dark:text-white mb-3">
-                Key Performance Metrics
+                Android Advantages
               </h3>
               <ul className="space-y-2 text-[#6B7280] dark:text-gray-300">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-[#00A878] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>93% sensitivity for generalized tonic-clonic seizures</span>
+                  <span>Works with a wide range of affordable Android smartwatches</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-[#00A878] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Average alert time under 20 seconds after seizure onset</span>
+                  <span>Seamless integration with Android's notification system</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-[#00A878] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Less than 0.2 false alarms per day on average</span>
+                  <span>Battery-optimized for all-day monitoring</span>
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 text-[#00A878] mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Battery life up to 48 hours of continuous monitoring</span>
+                  <span>Frequent updates through Google Play Store</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         
-        {/* Certifications and Partners */}
+        {/* Compatible Devices */}
         <div className="mt-20 text-center">
           <h3 className="text-xl font-semibold text-[#2C3E50] dark:text-white mb-6">
-            Clinically Validated & Certified
+            Compatible with Popular Android Smartwatches
           </h3>
           
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 mb-3 relative">
                 <Image
-                  src="/certification-fda.jpg"
-                  alt="FDA Cleared"
+                  src="/device-samsung.jpg"
+                  alt="Samsung Galaxy Watch"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-[#6B7280] dark:text-gray-300">FDA Cleared</span>
+              <span className="text-sm text-[#6B7280] dark:text-gray-300">Samsung Galaxy Watch</span>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 mb-3 relative">
                 <Image
-                  src="/certification-ce.jpg"
-                  alt="CE Mark"
+                  src="/device-fossil.jpg"
+                  alt="Fossil Gen 6"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-[#6B7280] dark:text-gray-300">CE Mark</span>
+              <span className="text-sm text-[#6B7280] dark:text-gray-300">Fossil Gen 6</span>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 mb-3 relative">
                 <Image
-                  src="/certification-hipaa.jpg"
-                  alt="HIPAA Compliant"
+                  src="/device-ticwatch.jpg"
+                  alt="TicWatch Pro"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-[#6B7280] dark:text-gray-300">HIPAA Compliant</span>
+              <span className="text-sm text-[#6B7280] dark:text-gray-300">TicWatch Pro</span>
             </div>
             
             <div className="flex flex-col items-center">
               <div className="w-20 h-20 mb-3 relative">
                 <Image
-                  src="/certification-iso.jpg"
-                  alt="ISO 13485"
+                  src="/device-pixel.jpg"
+                  alt="Google Pixel Watch"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-sm text-[#6B7280] dark:text-gray-300">ISO 13485</span>
+              <span className="text-sm text-[#6B7280] dark:text-gray-300">Google Pixel Watch</span>
             </div>
+          </div>
+          
+          <div className="mt-12">
+            <a 
+              href="#download" 
+              className="btn-primary inline-flex items-center"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0007.5511-.4482.9997-.9993.9997zm-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993.0007.5511-.4482.9997-.9993.9997z"/>
+                <path d="M6.27 7.08l4.15 7.2c.82 1.42 1.18 2.05 1.83 2.05.65 0 1.03-.65 1.76-1.94l4.4-7.31H6.27z"/>
+              </svg>
+              Get EpiSave on Google Play
+            </a>
           </div>
         </div>
       </div>
