@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - EpiSave</title>
+    <link rel="icon" href="/Website-for-EpiSafe/logo.svg" type="image/svg+xml">
     <style>
         * {
             margin: 0;
@@ -82,11 +83,23 @@
                     window.location.href = '/Website-for-EpiSafe/';
                 });
             }
+            
+            // Add Tailwind CSS if we can find it
+            try {
+                // Try to load Tailwind CSS from parent directory
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = '/Website-for-EpiSafe/_next/static/css/app/layout.css';
+                document.head.appendChild(link);
+            } catch (e) {
+                console.error('Could not load Tailwind CSS', e);
+            }
         });
     </script>
 </head>
 <body>
     <div class="container">
+        <img src="/Website-for-EpiSafe/logo.svg" alt="EpiSave Logo" style="width:120px; height:120px; margin-bottom:2rem;">
         <h1 class="error-code">404</h1>
         <h2 class="title">Page Not Found</h2>
         <p class="message">

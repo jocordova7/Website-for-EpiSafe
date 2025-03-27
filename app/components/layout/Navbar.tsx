@@ -1,12 +1,18 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [basePath, setBasePath] = useState('');
+
+  useEffect(() => {
+    // Set basePath for GitHub Pages in production environment
+    setBasePath(process.env.NODE_ENV === 'production' ? '/Website-for-EpiSafe' : '');
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -25,7 +31,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Home">
               <img 
-                src="/logo.svg" 
+                src={`${basePath}/logo.svg`}
                 alt="EpiSave Logo" 
                 className="h-8 w-auto mr-2" 
               />

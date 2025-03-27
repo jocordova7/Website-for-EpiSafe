@@ -1,10 +1,17 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import CTAButton from '../ui/CTAButton';
 
 export default function HeroSection() {
+  const [basePath, setBasePath] = useState('');
+  
+  useEffect(() => {
+    // Set basePath for GitHub Pages in production environment
+    setBasePath(process.env.NODE_ENV === 'production' ? '/Website-for-EpiSafe' : '');
+  }, []);
+
   return (
     <section className="pt-24 pb-12 md:py-28 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,13 +35,10 @@ export default function HeroSection() {
           </div>
           <div className="flex-1 mt-12 md:mt-0">
             <div className="relative h-[400px] w-full max-w-md mx-auto">
-              <Image 
-                src="/logo.svg"
+              <img 
+                src={`${basePath}/logo.svg`}
                 alt="EpiSave on Android Smartwatch"
-                fill
-                className="object-contain"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>

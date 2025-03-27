@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpiSave Direct Access</title>
+    <style>
+        :root {
+            --primary: #4cc9f0;
+            --accent: #f72585;
+            --text: #333333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+            padding: 2rem;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 3rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 2rem;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 2rem;
+            color: #555;
+            font-size: 1.1rem;
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .button {
+            display: block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(76, 201, 240, 0.3);
+        }
+        
+        .button.accent {
+            background-color: var(--accent);
+        }
+        
+        .button.accent:hover {
+            box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+        }
+        
+        .note {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 1.5rem;
+        }
+    </style>
+<link rel="stylesheet" href="/Website-for-EpiSafe/_next/static/css/7619a90d332ff966.css" />
+<link rel="icon" href="/Website-for-EpiSafe/logo.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Epi<span>Save</span></div>
+        <h1>Direct Access</h1>
+        <p>Welcome to EpiSave. Choose where you'd like to go:</p>
+        
+        <div class="button-group">
+            <a href="https://jocordova7.github.io/Website-for-EpiSafe/index.html" class="button">Marketing Site</a>
+            <a href="https://jocordova7.github.io/Website-for-EpiSafe/" class="button accent">Seizure Monitoring App</a>
+        </div>
+        
+        <p class="note">We recommend bookmarking this page for easy access to either the EpiSave marketing site or the monitoring application.</p>
+    </div>
+</body>
+</html> 
