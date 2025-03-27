@@ -1,0 +1,71 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch name to trigger deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build
+        run: |
+          npm run build
+          touch out/.nojekyll
+          cp -rf public/CNAME out/CNAME
+          
+          # Ensure custom 404 page is set up
+          cp -rf public/404.html out/404.html
+          echo "Copied custom 404.html for better navigation handling"
+          
+          # Copy marketing landing page from public/index.html
+          cp -rf public/index.html out/index.html
+          echo "Copied marketing landing page to index.html"
+          
+          # Copy direct access page if it exists
+          if [ -f public/direct.html ]; then
+            cp -rf public/direct.html out/direct.html
+            echo "Copied direct access page"
+          fi
+          
+          # Create app-entry.html if needed
+          if [ ! -f out/app-entry.html ]; then
+            echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>EpiSave Application</title><meta http-equiv="refresh" content="0;url=https://jocordova7.github.io/Website-for-EpiSafe/app/"><script>window.location.href = "https://jocordova7.github.io/Website-for-EpiSafe/app/";</script></head><body><div style="text-align: center; font-family: Arial, sans-serif; padding: 50px;"><h1>Loading EpiSave Application</h1><p>If you are not redirected automatically, please click the link below:</p><a href="https://jocordova7.github.io/Website-for-EpiSafe/app/">Launch EpiSave Application</a></div></body></html>' > out/app-entry.html
+            echo "Created app-entry.html for application access"
+          fi
+          
+          # Create an app/ folder and ensure it has an index.html
+          mkdir -p out/app
+          if [ ! -f out/app/index.html ]; then
+            # Create a simple app entry
+            echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>EpiSave Application</title><meta http-equiv="refresh" content="0;url=https://jocordova7.github.io/Website-for-EpiSafe/"><script>window.location.href = "https://jocordova7.github.io/Website-for-EpiSafe/";</script></head><body><div style="text-align: center; font-family: Arial, sans-serif; padding: 50px;"><h1>EpiSave Application</h1><p>Redirecting to main application...</p><a href="https://jocordova7.github.io/Website-for-EpiSafe/">Go to EpiSave</a></div></body></html>' > out/app/index.html
+            echo "Created a simple app/index.html"
+          fi
+          
+          # Ensure 'out' directory structure is correct
+          echo "Build completed, out directory contains:"
+          ls -la out/
+        env:
+          NODE_ENV: production
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out 
