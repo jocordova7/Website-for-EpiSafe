@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',  // Enable static exports
-  basePath: '/Website-for-EpiSafe', // Match your repository name
-  assetPrefix: '/Website-for-EpiSafe/',
+  // For GitHub Pages, we'll handle basePath and assetPrefix differently
+  // by using the folder structure
+  basePath: '',
   images: {
     unoptimized: true, // Required for static export
   },

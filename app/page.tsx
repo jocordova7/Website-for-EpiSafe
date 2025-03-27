@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -14,12 +13,16 @@ export default function Home() {
           Your trusted companion for seizure monitoring
         </p>
         <div className="flex justify-center">
-          <Link
-            href="/monitoring"
+          <a
+            href="#"
             className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all"
+            onClick={(e) => {
+              e.preventDefault();
+              alert('Coming soon! This feature is under development.');
+            }}
           >
             Get Started
-          </Link>
+          </a>
         </div>
       </div>
     </main>
