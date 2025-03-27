@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | EpiSave</title>
+    <meta http-equiv="refresh" content="5;url=https://jocordova7.github.io/Website-for-EpiSafe/index.html">
+    <style>
+        :root {
+            --primary: #4cc9f0;
+            --accent: #f72585;
+            --text: #333333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            line-height: 1.6;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+        }
+        
+        .countdown {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Epi<span>Save</span></div>
+        <h1>Page Not Found</h1>
+        <p>We're sorry, but the page you were looking for doesn't exist or has been moved.</p>
+        <p>You will be redirected to our homepage in <span id="timer">5</span> seconds.</p>
+        <a href="https://jocordova7.github.io/Website-for-EpiSafe/index.html" class="button">Go to Homepage</a>
+    </div>
+
+    <script>
+        // Countdown timer
+        let timeLeft = 5;
+        const timer = document.getElementById('timer');
+        
+        const countdownInterval = setInterval(() => {
+            timeLeft--;
+            timer.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "https://jocordova7.github.io/Website-for-EpiSafe/index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+</html> 
