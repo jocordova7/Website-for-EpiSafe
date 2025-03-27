@@ -14,12 +14,12 @@ export default function Home() {
           Your trusted companion for seizure monitoring
         </p>
         <div className="flex justify-center">
-          <a
+          <Link
             href="/monitoring"
             className="bg-primary text-white px-6 py-3 rounded-lg hover:bg-opacity-90 transition-all"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </main>

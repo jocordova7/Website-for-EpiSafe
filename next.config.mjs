@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',  // Enable static exports
   basePath: '/Website-for-EpiSafe', // Match your repository name
+  assetPrefix: '/Website-for-EpiSafe/',
   images: {
     unoptimized: true, // Required for static export
   },
@@ -17,6 +18,7 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  trailingSlash: true,
 };
 
 export default nextConfig; 

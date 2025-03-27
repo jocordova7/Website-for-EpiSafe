@@ -2,29 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>EpiSave - Single Page App</title>
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
-      var segmentCount = 1;
-
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
-        l.pathname
-          .slice(1)
-          .split('/')
-          .slice(segmentCount)
-          .join('/')
-          .replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+    <title>EpiSave - Page Not Found</title>
+    <script>
+      // Redirect to home page
+      window.location.href = "/Website-for-EpiSafe/";
     </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    Redirecting...
+    <h1>Page Not Found</h1>
+    <p>Redirecting to home page...</p>
+    <p>If you are not redirected, <a href="/Website-for-EpiSafe/">click here</a>.</p>
   </body>
 </html> 
