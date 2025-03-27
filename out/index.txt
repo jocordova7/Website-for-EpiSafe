@@ -1,15 +1,21 @@
-2:I[9107,[],"ClientPageRoot"]
-3:I[5886,["648","static/chunks/648-1b39dabba0c710c6.js","145","static/chunks/145-ce24278ce52790ae.js","931","static/chunks/app/page-2d0b033e7216073b.js"],"default",1]
-4:"$Sreact.suspense"
-5:I[1523,["648","static/chunks/648-1b39dabba0c710c6.js","185","static/chunks/app/layout-454e7db51a0844d8.js"],"BailoutToCSR"]
-0:["zngx7fo0djfVwSjD2R9Fw",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/Website-for-EpiSafe/_next/static/css/c737aea64225e66d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","children":["$","body",null,{"className":"__variable_d597e8 antialiased bg-gray-50 dark:bg-gray-900 min-h-screen pt-16","children":["$","$4",null,{"fallback":null,"children":["$","$L5",null,{"reason":"next/dynamic","children":"$L6"}]}]}]}]],null],null],["$L7",null]]]]
-8:I[4896,["648","static/chunks/648-1b39dabba0c710c6.js","185","static/chunks/app/layout-454e7db51a0844d8.js"],"ToastProvider"]
-9:I[8418,["648","static/chunks/648-1b39dabba0c710c6.js","185","static/chunks/app/layout-454e7db51a0844d8.js"],"default"]
-a:I[4707,[],""]
-b:I[6423,[],""]
-c:I[5447,["648","static/chunks/648-1b39dabba0c710c6.js","160","static/chunks/app/not-found-f138583966f2528c.js"],"default"]
-d:I[459,["648","static/chunks/648-1b39dabba0c710c6.js","185","static/chunks/app/layout-454e7db51a0844d8.js"],"default"]
-e:I[9663,["648","static/chunks/648-1b39dabba0c710c6.js","185","static/chunks/app/layout-454e7db51a0844d8.js"],"default"]
-6:["$","$L8",null,{"children":[["$","$4",null,{"fallback":null,"children":["$","$L5",null,{"reason":"next/dynamic","children":["$","$L9",null,{}]}]}],["$","main",null,{"children":["$","$La",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$Lb",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$Lc",null,{}],"notFoundStyles":[]}]}],["$","$4",null,{"fallback":null,"children":["$","$L5",null,{"reason":"next/dynamic","children":["$","$Ld",null,{}]}]}],["$","$4",null,{"fallback":null,"children":["$","$L5",null,{"reason":"next/dynamic","children":["$","$Le",null,{}]}]}]]}]
-7:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"EpiSave - Advanced Seizure Detection for Android Wearables"}],["$","meta","3",{"name":"description","content":"Reliable, life-improving seizure detection solution for Android smartwatches providing real-time alerts and peace of mind for patients and caregivers."}],["$","meta","4",{"name":"keywords","content":"seizure detection, epilepsy monitoring, android wearables, smartwatch, healthcare app, real-time alerts"}]]
-1:null
+1:"$Sreact.fragment"
+2:I[4970,[],"ClientSegmentRoot"]
+3:I[8315,["177","static/chunks/app/layout-12a67bc7a1ce5c00.js"],"default"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["874","static/chunks/874-dc8337324d33e671.js","345","static/chunks/app/not-found-ca25c521a7cc159d.js"],"default"]
+8:I[894,[],"ClientPageRoot"]
+9:I[9111,["874","static/chunks/874-dc8337324d33e671.js","766","static/chunks/766-d8e2445384ebd1df.js","974","static/chunks/app/page-a62352f607b156d0.js"],"default"]
+c:I[9665,[],"OutletBoundary"]
+f:I[9665,[],"ViewportBoundary"]
+11:I[9665,[],"MetadataBoundary"]
+13:I[6614,[],""]
+:HL["/Website-for-EpiSafe/_next/static/css/7619a90d332ff966.css","style"]
+0:{"P":null,"b":"dpsLp4azKeQ0Y9PVURXI5","p":"/Website-for-EpiSafe","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Website-for-EpiSafe/_next/static/css/7619a90d332ff966.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]},"params":{},"promise":"$@7"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L8",null,{"Component":"$9","searchParams":{},"params":"$0:f:0:1:1:props:children:1:props:params","promises":["$@a","$@b"]}],"$undefined",null,["$","$Lc",null,{"children":["$Ld","$Le",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","UQ1jhFPW1NNF4QTCx7wNh",{"children":[["$","$Lf",null,{"children":"$L10"}],null]}],["$","$L11",null,{"children":"$L12"}]]}],false]],"m":"$undefined","G":["$13","$undefined"],"s":false,"S":true}
+7:{}
+a:{}
+b:{}
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+d:null
+e:null
+12:[]

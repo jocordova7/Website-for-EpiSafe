@@ -28,7 +28,7 @@ export default function EmergencyButton() {
             <button className="w-full py-2 bg-red-600 hover:bg-red-700 text-white rounded transition-colors">
               Call Emergency Services
             </button>
-            <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors">
+            <button className="w-full py-2 bg-green-600 hover:bg-green-700 text-white rounded transition-colors">
               Contact Caregiver
             </button>
           </div>

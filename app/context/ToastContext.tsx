@@ -44,7 +44,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
             key={toast.id}
             className={`p-3 rounded-lg shadow-lg flex items-start max-w-xs ${
               toast.type === 'success' ? 'bg-green-500' : 
-              toast.type === 'error' ? 'bg-red-500' : 'bg-blue-500'
+              toast.type === 'error' ? 'bg-red-500' : 'bg-green-400'
             } text-white`}
           >
             <div className="flex-1">{toast.message}</div>
