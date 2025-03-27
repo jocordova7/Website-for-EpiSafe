@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',  // Enable static exports
+  basePath: '/Website-for-EpiSafe', // Match your repository name
+  images: {
+    unoptimized: true, // Required for static export
+  },
   typescript: {
     // !! WARN !!
     // Dangerously allow production builds to successfully complete even if
