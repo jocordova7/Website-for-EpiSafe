@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',  // Enable static exports
-  // For GitHub Pages, we'll handle basePath and assetPrefix differently
-  // by using the folder structure
-  basePath: '',
+  // Set correct basePath for GitHub Pages deployment
+  basePath: process.env.NODE_ENV === 'production' ? '/Website-for-EpiSafe' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Website-for-EpiSafe/' : '',
   images: {
     unoptimized: true, // Required for static export
   },
