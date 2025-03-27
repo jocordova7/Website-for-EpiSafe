@@ -29,11 +29,12 @@ export default function HeroSection() {
           <div className="flex-1 mt-12 md:mt-0">
             <div className="relative h-[400px] w-full max-w-md mx-auto">
               <Image 
-                src="/images/hero-wearable.jpg"
+                src="/logo.svg"
                 alt="EpiSave on Android Smartwatch"
                 fill
                 className="object-contain"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

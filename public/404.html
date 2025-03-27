@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found | EpiSave</title>
-    <meta http-equiv="refresh" content="5;url=https://jocordova7.github.io/Website-for-EpiSafe/index.html">
+    <title>Page Not Found - EpiSave</title>
     <style>
-        :root {
-            --primary: #4cc9f0;
-            --accent: #f72585;
-            --text: #333333;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -21,93 +12,87 @@
         }
         
         body {
-            font-family: 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f9fafb;
+            color: #111827;
+            line-height: 1.5;
         }
         
         .container {
-            text-align: center;
-            max-width: 600px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             padding: 2rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
+        .error-code {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #2E8B57;
             margin-bottom: 1rem;
         }
         
-        .logo span {
-            color: var(--accent);
-        }
-        
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            margin-bottom: 1.5rem;
-            color: #555;
-        }
-        
-        .button {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
+        .title {
+            font-size: 1.5rem;
             font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .message {
+            max-width: 28rem;
+            margin-bottom: 2rem;
+            color: #6b7280;
+        }
+        
+        .home-link {
+            display: inline-block;
+            background-color: #2E8B57;
+            color: white;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
             text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 1rem;
+            transition: background-color 0.2s;
         }
         
-        .button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(247, 37, 133, 0.3);
+        .home-link:hover {
+            background-color: #216e43;
         }
         
-        .countdown {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            color: #777;
+        @media (max-width: 640px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .title {
+                font-size: 1.25rem;
+            }
         }
     </style>
+    <script>
+        // Redirect with basePath handling for GitHub Pages
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const homeButton = document.getElementById('home-button');
+            if (homeButton) {
+                homeButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = '/Website-for-EpiSafe/';
+                });
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
-        <div class="logo">Epi<span>Save</span></div>
-        <h1>Page Not Found</h1>
-        <p>We're sorry, but the page you were looking for doesn't exist or has been moved.</p>
-        <p>You will be redirected to our homepage in <span id="timer">5</span> seconds.</p>
-        <a href="https://jocordova7.github.io/Website-for-EpiSafe/index.html" class="button">Go to Homepage</a>
+        <h1 class="error-code">404</h1>
+        <h2 class="title">Page Not Found</h2>
+        <p class="message">
+            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+        </p>
+        <a href="/Website-for-EpiSafe/" id="home-button" class="home-link">Return to Home</a>
     </div>
-
-    <script>
-        // Countdown timer
-        let timeLeft = 5;
-        const timer = document.getElementById('timer');
-        
-        const countdownInterval = setInterval(() => {
-            timeLeft--;
-            timer.textContent = timeLeft;
-            
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                window.location.href = "https://jocordova7.github.io/Website-for-EpiSafe/index.html";
-            }
-        }, 1000);
-    </script>
 </body>
 </html> 

@@ -2,13 +2,14 @@
   "name": "seizure-monitor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jocordova7.github.io/Website-for-EpiSafe",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next build",
-    "deploy": "cross-env NODE_ENV=production npm run build && touch out/.nojekyll && echo jocordova7.github.io > out/CNAME && git add out/ && git commit -m \"Deploy to gh-pages\" && git subtree push --prefix out origin gh-pages"
+    "export": "cross-env NODE_ENV=production node scripts/export-for-github.js",
+    "deploy": "npm run export && npx gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "next": "^14.0.3",
@@ -23,6 +24,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.0.3",
+    "gh-pages": "^6.0.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"

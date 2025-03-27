@@ -2,12 +2,19 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  // Helper function to determine if a link is active
+  const isActive = (path: string) => {
+    return pathname === path;
   };
 
   return (
@@ -17,7 +24,12 @@ export default function Navbar() {
           {/* Logo and brand name */}
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center" aria-label="Home">
-              <span className="ml-3 text-xl font-semibold text-[#2C3E50] dark:text-white">
+              <img 
+                src="/logo.svg" 
+                alt="EpiSave Logo" 
+                className="h-8 w-auto mr-2" 
+              />
+              <span className="text-xl font-semibold text-[#2C3E50] dark:text-white">
                 EpiSave
               </span>
             </Link>
@@ -26,25 +38,46 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/" 
+                className={`${isActive('/') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 Home
               </Link>
-              <Link href="/marketing/whyepisave" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/marketing/whyepisave" 
+                className={`${isActive('/marketing/whyepisave') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 Why EpiSave?
               </Link>
-              <Link href="/marketing/howitworks" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/marketing/howitworks" 
+                className={`${isActive('/marketing/howitworks') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 How It Works
               </Link>
-              <Link href="/marketing/features" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/marketing/features" 
+                className={`${isActive('/marketing/features') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 Features
               </Link>
-              <Link href="/marketing/testimonials" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/marketing/testimonials" 
+                className={`${isActive('/marketing/testimonials') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 Testimonials
               </Link>
-              <Link href="/marketing/faq" className="text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+              <Link 
+                href="/marketing/faq" 
+                className={`${isActive('/marketing/faq') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary px-3 py-2 rounded-md text-sm font-medium`}
+              >
                 FAQ
               </Link>
-              <Link href="/marketing/contact" className="text-gray-700 hover:bg-primary hover:text-white px-3 py-2 rounded-md text-sm font-medium border border-primary">
+              <Link 
+                href="/marketing/contact" 
+                className="text-white bg-primary hover:bg-opacity-90 px-3 py-2 rounded-md text-sm font-medium"
+              >
                 Download
               </Link>
             </div>
@@ -54,7 +87,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button 
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-900 hover:bg-gray-100"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-primary hover:bg-gray-100"
               aria-controls="mobile-menu"
               aria-expanded={isMenuOpen}
               onClick={toggleMenu}
@@ -79,25 +112,46 @@ export default function Navbar() {
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             Home
           </Link>
-          <Link href="/marketing/whyepisave" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/marketing/whyepisave" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/marketing/whyepisave') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             Why EpiSave?
           </Link>
-          <Link href="/marketing/howitworks" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/marketing/howitworks" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/marketing/howitworks') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             How It Works
           </Link>
-          <Link href="/marketing/features" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/marketing/features" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/marketing/features') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             Features
           </Link>
-          <Link href="/marketing/testimonials" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/marketing/testimonials" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/marketing/testimonials') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             Testimonials
           </Link>
-          <Link href="/marketing/faq" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+          <Link 
+            href="/marketing/faq" 
+            className={`block px-3 py-2 rounded-md text-base font-medium ${isActive('/marketing/faq') ? 'text-primary font-bold' : 'text-gray-700'} hover:text-primary hover:bg-gray-100`}
+          >
             FAQ
           </Link>
-          <Link href="/marketing/contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-primary hover:text-white border border-primary">
+          <Link 
+            href="/marketing/contact" 
+            className="block px-3 py-2 rounded-md text-base font-medium text-white bg-primary hover:bg-opacity-90"
+          >
             Download
           </Link>
         </div>
