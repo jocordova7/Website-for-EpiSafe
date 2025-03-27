@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found - EpiSave</title>
-    <link rel="icon" href="/Website-for-EpiSafe/logo.svg" type="image/svg+xml">
+    <link rel="icon" href="/Website-for-EpiSafe/favicon.ico" type="image/x-icon">
     <style>
         * {
             margin: 0;
@@ -57,10 +57,17 @@
             border-radius: 0.375rem;
             text-decoration: none;
             transition: background-color 0.2s;
+            margin-bottom: 1rem;
         }
         
         .home-link:hover {
             background-color: #216e43;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 2rem;
         }
         
         @media (max-width: 640px) {
@@ -73,39 +80,37 @@
             }
         }
     </style>
-    <script>
-        // Redirect with basePath handling for GitHub Pages
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const homeButton = document.getElementById('home-button');
-            if (homeButton) {
-                homeButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.location.href = '/Website-for-EpiSafe/';
-                });
-            }
-            
-            // Add Tailwind CSS if we can find it
-            try {
-                // Try to load Tailwind CSS from parent directory
-                const link = document.createElement('link');
-                link.rel = 'stylesheet';
-                link.href = '/Website-for-EpiSafe/_next/static/css/app/layout.css';
-                document.head.appendChild(link);
-            } catch (e) {
-                console.error('Could not load Tailwind CSS', e);
-            }
-        });
-    </script>
 </head>
 <body>
     <div class="container">
-        <img src="/Website-for-EpiSafe/logo.svg" alt="EpiSave Logo" style="width:120px; height:120px; margin-bottom:2rem;">
+        <img src="/Website-for-EpiSafe/logo.svg" alt="EpiSave Logo" class="logo">
         <h1 class="error-code">404</h1>
         <h2 class="title">Page Not Found</h2>
         <p class="message">
             The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
         </p>
-        <a href="/Website-for-EpiSafe/" id="home-button" class="home-link">Return to Home</a>
+        <a href="/Website-for-EpiSafe/" class="home-link">Return to Home</a>
+        <a href="/Website-for-EpiSafe/direct.html" class="home-link" style="background-color: #4a5568;">Access App Directly</a>
     </div>
+
+    <!-- Script to handle potential GitHub Pages issues -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fix all links to ensure they have the correct base path
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                if (link.getAttribute('href').startsWith('/') && !link.getAttribute('href').startsWith('/Website-for-EpiSafe/')) {
+                    link.setAttribute('href', '/Website-for-EpiSafe' + link.getAttribute('href'));
+                }
+            });
+
+            // Check if we're at the root of the GitHub Pages site
+            const path = window.location.pathname;
+            if (path === '/Website-for-EpiSafe/404.html') {
+                // We're at the GitHub Pages 404 page
+                console.log('Detected GitHub Pages 404 page');
+            }
+        });
+    </script>
 </body>
 </html> 
