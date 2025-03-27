@@ -5,8 +5,9 @@ import dynamic from "next/dynamic";
 import "./globals.css";
 
 // Dynamically import components with no SSR
-const Navbar = dynamic(() => import('./components/Navbar'), { ssr: false });
-const EmergencyButton = dynamic(() => import('./components/EmergencyButton'), { ssr: false });
+const Navbar = dynamic(() => import('./components/layout/Navbar'), { ssr: false });
+const Footer = dynamic(() => import('./components/layout/Footer'), { ssr: false });
+const EmergencyButton = dynamic(() => import('./components/ui/EmergencyButton'), { ssr: false });
 const ToastProvider = dynamic(
   () => import('./context/ToastContext').then(mod => ({ default: mod.ToastProvider })),
   { ssr: false }
@@ -35,7 +36,8 @@ export default function RootLayout({
       >
         <ToastProvider>
           <Navbar />
-          {children}
+          <main>{children}</main>
+          <Footer />
           <EmergencyButton />
         </ToastProvider>
       </body>
